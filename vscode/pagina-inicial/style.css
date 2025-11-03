@@ -6,7 +6,7 @@
  
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #fffcf6;
     }
  
     header {
@@ -106,17 +106,26 @@
       }
     }
  
-    main {
-      padding: 40px;
-      text-align: center;
-    }
- 
-    main h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
- 
-    main p {
-      font-size: 18px;
-      color: #555;
-    }
+.catalogo{
+    /* border: 2px solid red; */
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+.catalogo h2, p{
+    color: #fffcf6;
+}
+
+.produto{
+    background-color: #023514;
+    padding: 1.2%;
+    width: fit-content;
+    border-radius: 3%;
+
+}
+.produto img{
+    width: 224px;
+    height: 325.7px;
+}
