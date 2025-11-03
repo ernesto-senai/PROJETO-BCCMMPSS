@@ -52,15 +52,19 @@
     }
  
     nav {
+      background-color: #023514;
+      color: #fff;
       display: flex;
       align-items: center;
       gap: 20px;
+      border: 2px solid #546e5d;
     }
  
     nav ul {
       list-style: none;
       display: flex;
       gap: 20px;
+      padding-left: 60px;
     }
  
     nav ul li a {
