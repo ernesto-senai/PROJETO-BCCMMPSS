@@ -58,7 +58,7 @@ body {
       align-items: center;
       gap: 20px;
       border: 2px solid #546e5d;
-      
+      margin-bottom: 50px;
     }
  
     nav ul {
@@ -219,4 +219,24 @@ body {
  
 .seta-direita {
   right: 10px;
+}
+
+/* começo é aqui */
+
+.produtoVenda{
+  background-color: #023514;
+  color: white;
+  display: flex;
+  padding: 1.2%;
+  width: 25%;
+  border-radius: 3%;
+  
+}
+.produtoVenda img{
+    width: 237.2px;
+    height: 341.2px;
+}
+.produtoVenda p{
+  width: 39%;
+  margin-left: 2%;
 }
