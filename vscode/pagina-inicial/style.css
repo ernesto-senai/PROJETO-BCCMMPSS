@@ -36,13 +36,14 @@
     .logo img {
       font-size: 22px;
       font-weight: bold;
-      width: 150px;
+      width: 100px;
     }
     
     .logo p{
         font-size: 30px;
         color: rgb(255, 255, 255);
-        padding-top: 52px;
+        padding-top: 35px;
+        padding-left: 10px;
     }
     .menu-toggle {
       display: none;
@@ -58,9 +59,11 @@
       align-items: center;
       gap: 20px;
       border: 2px solid #546e5d;
+      
     }
  
     nav ul {
+     
       list-style: none;
       display: flex;
       gap: 300px;
