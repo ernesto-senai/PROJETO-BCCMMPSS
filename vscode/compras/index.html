@@ -1,47 +1,4 @@
 
-
-
-
-
-
-
-
-<!-- SEGUINTE PARCEIRO, EU TO PENSANDO EM FAZER UMA DIV COBRINDO DES DA FOTO COM A SINOPSE ATÉ A PARTE DE COMENTARIO Q VC TEM Q CRIAR.
- 
-ESSA DIV VAI COBRIR A FOTO NOME E COMENTARIO, USANDO UM JUSTIFY-CONTENT= SPACE-AROUND
-
-AI VC CRIA UMA DIV PARA CADA UM, EU TAVA PENSANDO EM 3 DIVs, UMA PARA A ESQUERDA, DIREIRA E MEIO, É ISSO TMJ,-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -51,76 +8,103 @@ AI VC CRIA UMA DIV PARA CADA UM, EU TAVA PENSANDO EM 3 DIVs, UMA PARA A ESQUERDA
     <title>Document</title>
 </head>
 <body>
-     <header>
- 
+    <header>
+
     <div class="logo" >
 
-        <a href=""><img src="img/transferir.png"></a>
+        <a href=""><img src="/img/transferir (1).png"></a>
         <p>Dumbooks</p>
 
     </div>
     <input type="text" placeholder="O que você procura?">
-  </header>
-
-   <nav>
+    </header>
+    
+    <nav>
 
     <ul>
-      <li><a href="#"></a>Internacional</li>
-      <li><a href="#"></a>HQ</li>
-      <li><a href="#"></a>Livros</li>
-      <li><a href="#"></a>Jovens</li>
-      <li><a href="#"></a>Crianças</li>
-      <li><a href="#"></a>Geek</li>
+        <li><a href="#"></a>Internacional</li>
+        <li><a href="#"></a>HQ</li>
+        <li><a href="#"></a>Livros</li>
+        <li><a href="#"></a>Jovens</li>
+        <li><a href="#"></a>Crianças</li>
+        <li><a href="#"></a>Geek</li>
     </ul>
-  </nav>
-  
-  <div class="produtoVenda">
-    <img src="/img/lv1.jpg">
-    <p><strong>Olive Smith, uma estudante de doutorado em Biologia, finge estar namorando o temido professor Adam Carlsen para convencer sua melhor amiga de que está seguindo em frente. O que começa como um acordo conveniente logo se transforma em algo mais real, desafiando as crenças de Olive sobre amor, ciência e vulnerabilidade.</strong></p>
-  </div>
+    </nav>
+    <div class="superior">
+
+        <div class="produtoVenda">
+            <img src="/img/verity (1).png">
+            <p><strong>Olive Smith, uma estudante de doutorado em Biologia, finge estar namorando o temido professor Adam Carlsen para convencer sua melhor amiga de que está seguindo em frente. O que começa como um acordo conveniente logo se transforma em algo mais real, desafiando as crenças de Olive sobre amor, ciência e vulnerabilidade.</strong></p>
+        </div>
+        
+        <div class="nomeLivro">
+            <h2>O amor é um cientista bagunceiro</h2>
+            <p>Por: <strong>Emily Henry</strong></p>
+            <p>Romendado para <strong>maiores de 18 anos</strong></p>
+            Avaliação: ★★★★☆
+            <h3>R$ 49,90</h3>
+            <div class="quantity-selector">
+                <button onclick="decrease()">−</button>
+                <input type="text" id="quantity" value="1" readonly>
+                <button onclick="increase()">+</button>
+            </div>
+            <div class="button"></div>
+            <button class="button-37" role="button">Comprar agora</button>
+            <button class="button-38" role="button">Adicionar ao carrinho</button>
+            
+        </div>
+
+        <div class="comentario">
+            <input type="text" placeholder="Deixe o seu comentario">
+        </div>
+        
+        
+    </div>
 
 
 
+<!-- 
 
-     <div class="carousel-container">
- 
+
+    <div class="carousel-container">
+
         <div class="carousel-titulo">Cidades em destaque:</div>
- 
+
         <button class="seta seta-esquerda" aria-label="Anterior">&#10094;</button>
- 
+
         <div class="carousel">
- 
+
             <div class="carousel-conteudo" id="carousel-conteudo">
- 
+
                 <div class="card">
                     <img src="/img/lv1.jpg" alt="Salvador - BA" />
                     <div class="card-texto salvador">SALVADOR - BA</div>
                 </div>
- 
+
                 <div class="card">
                     <img src="/img/lv2.jpg" alt="Capital - SP" />
                     <div class="card-texto capital">CAPITAL - SP</div>
                 </div>
- 
+
                 <div class="card">
                     <img src="/img/lv3.jpg" alt="Ipanema - RJ" />
                     <div class="card-texto ipanema">IPANEMA - RJ</div>
                 </div>
- 
+
                 <div class="card">
                     <img src="/img/lv4.jpg" alt="Ourinhos - MG" />
                     <div class="card-texto ourinhos">OURINHOS - MG</div>
                 </div>
- 
+
                 <div class="card">
                     <img src="/img/verity.png" alt="Gramado - RS" />
                     <div class="card-texto gramado">GRAMADO - RS</div>
                 </div>
- 
+
             </div>
         </div>
         <button class="seta seta-direita" aria-label="Próximo">&#10095;</button>
     </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html>  -->
