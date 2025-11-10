@@ -56,3 +56,16 @@ document.querySelector('.seta-esquerda').addEventListener('click', () => {
   moveToIndex(index - 1);
 });
  
+
+//more ou less quantidade tela produto
+function increase() {
+  const input = document.getElementById("quantity");
+  input.value = parseInt(input.value) + 1;
+}
+
+function decrease() {
+  const input = document.getElementById("quantity");
+  if (parseInt(input.value) > 1) {
+    input.value = parseInt(input.value) - 1;
+  }
+}
