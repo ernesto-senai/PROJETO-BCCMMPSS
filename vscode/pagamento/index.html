@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <title>Dumbooks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Dumbooks">
+                <span class="site-name">Dumbooks</span>
+            </div>
+            <input type="text" class="search" placeholder=" 🔍Qual a escolha de hoje...">
+            <div class="cart">
+                <img src="img/sacola.png" alt="Sacola de compras">
+            </div>
+        </nav>
+
+        <div class="categories">
+            <a href="#">Internacional</a>
+            <a href="#">HQ</a>
+            <a href="#">Livros</a>
+            <a href="#">Jovens</a>
+            <a href="#">Crianças</a>
+            <a href="#">Geek</a>
+        </div>
+    </header>
+
+     <div class="container">
+    <!-- Resumo do Pedido -->
+    <section class="resumo-pedido">
+      <h2>Resumo do pedido</h2>
+      <div class="produto">
+        <img src="https://m.media-amazon.com/images/I/81xZ8xoEwAL._AC_UF1000,1000_QL80_.jpg" alt="Saga The Witcher">
+        <div>
+          <h3>Saga The Witcher</h3>
+          <p class="preco">R$589,99</p>
+          <p class="endereco">
+            Endereço Cadastrado<br>
+            R. Direita, 955 – Vila Santo Antônio, Cotia - SP
+          </p>
+        </div>
+      </div>
+      <div class="botoes">
+        <button class="cancelar">Cancelar pedido</button>
+        <button class="finalizar">Finalizar Compra!</button>
+      </div>
+    </section>
+
+    <!-- Método de Pagamento -->
+    <section class="pagamento">
+      <h2>Método de pagamento</h2>
+      <form>
+        <label><input type="radio" name="metodo" checked> Cartão de Crédito/Débito</label><br>
+        <label><input type="radio" name="metodo"> Pix</label><br>
+        <label><input type="radio" name="metodo"> Boleto</label>
+
+        <h3>Dados de pagamento</h3>
+        <input type="text" placeholder="Nome do Titular do Cartão"><br>
+        <div class="linha">
+          <input type="text" placeholder="Validade (MM/AA)">
+          <input type="text" placeholder="CVC">
+        </div>
+        <input type="text" placeholder="Número do Cartão"><br>
+        <input type="text" placeholder="Cupom de desconto">
+      </form>
+    </section>
+  </div>
+
+
+
+
+
+   
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
