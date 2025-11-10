@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #004d40, #010f0e);
+  padding: 30px 30px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.search {
+  flex: 1;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+}
+
+.cart img {
+  height: 70px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  padding: 12px 0;
+}
+
+.categories a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.categories a:hover {
+  text-decoration: underline;
+}
+.banner {
+  max-width: 1800px; /* largura maior */
+  height: 350px;     /* altura maior */
+  margin: 25px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* garante que a imagem preencha sem distorcer */
+  box-shadow: 2px 2px 5px #f0f0f0;
+}
+
+.card {
+    max-width: 400px;
+    box-shadow: 2px 2px 5px #bcc0b7;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+
+
+
+
+}
+
+.contentCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+.card {
+  flex-direction: column;
+  width: 200px;
+  height: 380px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+
+.container {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.resumo-pedido, .pagamento {
+  background: #fff8f0;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  width: 40%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pagamento {
+    margin-right: 40px;
+}
+
+h2, h3 {
+  color: #104d1e;
+}
+
+.produto {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.produto img {
+  width: 120px;
+  border-radius: 5px;
+}
+
+.preco {
+  font-weight: bold;
+}
+
+.botoes {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancelar {
+  background: #fff;
+  border: 1px solid #333;
+}
+
+.finalizar {
+  background: #104d1e;
+  color: white;
+}
+
+form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  width: 100%;
+}
