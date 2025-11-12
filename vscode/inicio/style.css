@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 30px 30px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search {
+    flex: 1;
+    margin: 0 30px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+}
+
+.cart img {
+    height: 70px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+.banner {
+    max-width: 1800px;
+    /* largura maior */
+    height: 350px;
+    /* altura maior */
+    margin: 25px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* garante que a imagem preencha sem distorcer */
+    box-shadow: 2px 2px 5px #f0f0f0;
+}
+
+.card {
+    max-width: 400px;
+    box-shadow: 2px 2px 5px #bcc0b7;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+
+
+
+
+}
+
+.contentCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    padding: 20px;
+}
+
+.card {
+    flex-direction: column;
+    width: 200px        ;
+    
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+}
+
+
+.oi {
+    margin-left: 180px;
+    font-size: larger;
+    color: #767775;
+    
+}
+
+.editoras {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.titulo-editoras {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.logos-editoras {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+
+
+.meio {
+
+    margin: auto;
+    background: #000;
+    width: 350px;
+    height: 500px;
+    padding: 10px;
+    border-radius: 1rem;
+}
+
+.content-meio {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+
+}
+
+footer {
+  background-color: #004d40;
+  color: white;
+  padding: 20px;
+  text-align:center;
+  
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.escrita{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #004d40;
+     font-size: 14px;
+
+}
+
+.vendidos{
+     font-size: 9px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  flex: 1;
+}
+
+.book-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8 px;
+  text-align: center;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  width: 200px;
+  height: 400px;
+  
+}
+
+.book-card img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.book-card h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+
+
+
+
+
+
