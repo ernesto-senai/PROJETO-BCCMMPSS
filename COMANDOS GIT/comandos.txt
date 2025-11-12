@@ -1,1 +1,5 @@
+git add .    //ele prepara para adicionar
 
+git commit -m "comentario"  //ele comenta a alteração e é obrigatório colocar
+
+git push origin main  // ele envia difinitivamente pro git hub
