@@ -1,14 +1,14 @@
 /*Fonts google  */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
- * {
-    font-family: "inter" , sans-serif;
+* {
+    font-family: "inter", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@ body{
     background: linear-gradient(#ecefee, #ced6fb);
 }
 
-.card-list .card-item .card-link{
+.card-list .card-item .card-link {
     width: 400px;
     display: block;
     background: #fff;
@@ -25,10 +25,30 @@ body{
     text-decoration: none;
 }
 
-.card-lidt .card-link .card-imagem{
-width: 100%;
-aspect-ratio: 16 / 9;
-object-fit: cover;
-border-radius: 10px;
+.card-list .card-link .card-imagem {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: antiquewhite;
+    margin: 16px 0 18px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+    background: #ced6fb;
 
 }
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 600;
+
+
+}
+.card-list .card-link 
