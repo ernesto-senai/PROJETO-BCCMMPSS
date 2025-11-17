@@ -5,99 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/cadastro.css">
 </head>
 
 <body>
 
     <div class="container">
-        <div class="formulario">
-
+        <div class="formulario-container">
             <form action="" method="post">
                 <h1>Cadastre-se</h1>
-                <section class="username-group">
-                    <label for="username">Nome:</label>
-                    <input class="igual" type="text" id="nome" name="Nome" required>
-                </section>
 
-                <section class="username-group">
-                    <label for="username">Sobrenome:</label>
-                    <input class="igual" type="text" id="sobrenome" name="Sobrenome" required>
-                </section>
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="Nome" required>
+                </div>
 
-                <section class="username-group">
-                    <label for="username">CPF:</label>
-                    <input class="igual" type="text" id="cpf" name="CPF" required>
-                </section>
+                <div class="input-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" name="Sobrenome" required>
+                </div>
 
-                <section class="username-group">
-                    <label for="username">Telefone:</label>
-                    <input class="igual" type="tel" id="tel" name="Telefone" required>
-                </section>
+                <div class="input-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="CPF" required>
+                </div>
 
-                <section class="username-group-password">
-                    <label for="password">Senha:</label>
-                    <input class="igual" type="password" id="senha" name="senha" required>
-                </section>
+                <div class="input-group">
+                    <label for="tel">Telefone:</label>
+                    <input type="tel" id="tel" name="Telefone" required>
+                </div>
 
-                <section class="confirmar-senha">
-                    <label for="password">Confirme sua senha:</label>
-                    <input class="igual" type="password" id="confirmarSenha" name="confirmar-senha" required>
-                </section>
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
 
-                <div class="beetwen">
-                    <div>
+                <div class="input-group">
+                    <label for="confirmarSenha">Confirme sua senha:</label>
+                    <input type="password" id="confirmarSenha" name="confirmar-senha" required>
+                </div>
+
+                <div class="opcoes-extras">
+                    <div class="checkbox-wrapper">
                         <input type="checkbox" name="checkbox" id="checkbox">
                         <label for="checkbox">Lembre de mim</label>
                     </div>
                     <a href="#">Esqueci minha senha</a>
                 </div>
 
-
-                <button class="button-84" role="button" >Cadastre-se</button>
-
-
+                <button class="btn-cadastrar" role="button">Cadastre-se</button>
             </form>
         </div>
-        <div class="imagem">
-<<<<<<< HEAD
-            <img src="../img/professional-graphic-bi-me.webp" alt="">
-=======
-            <img src="professional-graphic-bi-me.webp" alt="">
->>>>>>> 49726883395a013eb8b4a186dcf283ead30319a3
 
+        <div class="imagem-container">
+            <img src="../img/professional-graphic-bi-me.webp" alt="Ilustração de cadastro">
         </div>
     </div>
 
-   <script>
-  const form = document.querySelector('form');
-  const inputs = form.querySelectorAll('input[required]');
+    <script>
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input[required]');
 
- 
-  form.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-     
-      const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-      
-      if (!allFilled) {
-        event.preventDefault(); 
-      }
-    }
-  });
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio padrão
 
+            // Verifica novamente se todos os campos obrigatórios têm valor (extra safety)
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault(); 
-    const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            if (allFilled) {
+                // Verifica se as senhas batem (melhoria sugerida)
+                const senha = document.getElementById('senha').value;
+                const confirma = document.getElementById('confirmarSenha').value;
 
-    if (allFilled) {
-      window.location.href = 'bumbum.html'; 
-    } else {
-      alert('Por favor, preencha todos os campos antes de continuar.');
-    }
-  });
-</script>
+                if(senha !== confirma) {
+                    alert('As senhas não coincidem!');
+                    return;
+                }
+
+                // Redirecionamento
+                window.location.href = 'bumbum.html';
+            } else {
+                // O próprio HTML "required" já deve impedir isso, mas fica como fallback
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    </script>
 
 </body>
-
 </html>

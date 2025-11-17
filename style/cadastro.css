@@ -1,200 +1,157 @@
-*{
+/* Reset Básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
- 
-   
-    display: flex;
-   
-    align-items: center;
-}
- 
-.container {
-   
-    
-    width: 100%;
+    /* Removida a propriedade inválida font-weight: weight */
     height: 100vh;
-    justify-content: flex-end;
-    display: flex;
-    flex-direction: row-reverse;
-    
+    overflow: hidden; /* Evita scroll se não for necessário */
 }
 
-.imagem{
-    flex: 1;
-    background-color:#807f46;
+.container {
+    display: flex;
+    width: 100%;
     height: 100%;
-    
-    
-}
-.imagem img {
-    margin-top: 180px;
-    width: 900px;
-    
 }
 
-.formulario{
-    flex:1;
-    background-color: rgb(255, 255, 255);
-    height: 100%;
+/* --- Lado da Imagem --- */
+.imagem-container {
+    flex: 1; /* Ocupa 50% ou o espaço restante */
+    background-color: #807f46;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-.username-group{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-
+    align-items: center;
+    overflow: hidden;
 }
 
-
-.username-group-password{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorcer */
+    object-position: center;
 }
 
-.confirmar-senha {
+/* --- Lado do Formulário --- */
+.formulario-container {
+    flex: 1; /* Ocupa 50% */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Permite rolar se a tela for pequena verticalmente */
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Limita a largura para não ficar esticado */
     display: flex;
     flex-direction: column;
+    gap: 15px; /* Espaçamento uniforme entre os elementos */
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Estilização dos Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
     margin-bottom: 5px;
+    font-weight: 500;
+    color: #444;
 }
- 
 
-    form{
-        width: 59%;
-        margin-top: -60px;
-       
-    }
-    form h1{
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .igual, .button-84 {
-       
+.input-group input {
     padding: 12px;
     font-size: 16px;
-    border: 2px solid #cccccc85;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    margin-top: 8px;
+    outline: none;
+    transition: border-color 0.3s;
 }
- 
-.beetwen{
+
+.input-group input:focus {
+    border-color: #464d55;
+}
+
+/* Opções Extras (Checkbox e Link) */
+.opcoes-extras {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
-   
+    align-items: center;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.button-84 {
-    width: 100%;
+.checkbox-wrapper {
+    display: flex;
     align-items: center;
-    background-color: initial;
+    gap: 5px;
+}
+
+.opcoes-extras a {
+    color: #464d55;
+    text-decoration: none;
+}
+
+.opcoes-extras a:hover {
+    text-decoration: underline;
+}
+
+/* --- Botão (Estilo mantido e limpo) --- */
+.btn-cadastrar {
+    margin-top: 10px;
     background-image: linear-gradient(#464d55, #25292e);
+    border: 0;
     border-radius: 8px;
-    border-width: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
-    box-sizing: border-box;
     color: #fff;
     cursor: pointer;
-    display: inline-flex;
-    flex-direction: column;
-    font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: inherit;
     font-size: 18px;
+    font-weight: 600;
     height: 52px;
-    justify-content: center;
     line-height: 1;
-    margin: 0;
-    outline: none;
-    overflow: hidden;
     padding: 0 32px;
     text-align: center;
-    text-decoration: none;
-    transform: translate3d(0, 0, 0);
     transition: all 150ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    width: 100%;
 }
- 
-.button-84:hover {
+
+.btn-cadastrar:hover {
     box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
-    opacity: .85;
+    opacity: .9;
+    transform: translateY(-1px);
 }
- 
-.button-84:active {
-    outline: 0;
+
+.btn-cadastrar:active {
+    transform: translateY(1px);
 }
- 
-.button-84:focus {
-    box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
-}
- 
-@media (max-width: 420px) {
-    .button-84 {
-        height: 48px;
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha imagem e form em telas pequenas */
+    }
+
+    .imagem-container {
+        height: 200px; /* Imagem fica menor no topo */
+        flex: none;
+    }
+
+    .formulario-container {
+        padding: 40px 20px;
     }
 }
