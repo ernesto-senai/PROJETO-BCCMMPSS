@@ -54,45 +54,45 @@
                 </div>
 
 
-                <button class="button-84" role="button" >Cadastre-se</button>
+                <button class="button-84" role="button">Cadastre-se</button>
 
 
             </form>
         </div>
         <div class="imagem">
-            <img src="professional-graphic-bi-me.webp" alt="">
+            <img src="img/professional-graphic-bi-me.webp" alt="">
 
         </div>
     </div>
 
-   <script>
-  const form = document.querySelector('form');
-  const inputs = form.querySelectorAll('input[required]');
-
- 
-  form.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-     
-      const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
-      
-      if (!allFilled) {
-        event.preventDefault(); 
-      }
-    }
-  });
+    <script>
+        const form = document.querySelector('form');
+        const inputs = form.querySelectorAll('input[required]');
 
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault(); 
-    const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        form.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
 
-    if (allFilled) {
-      window.location.href = 'bumbum.html'; 
-    } else {
-      alert('Por favor, preencha todos os campos antes de continuar.');
-    }
-  });
-</script>
+                const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+
+                if (!allFilled) {
+                    event.preventDefault();
+                }
+            }
+        });
+
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+
+            if (allFilled) {
+                window.location.href = 'bumbum.html';
+            } else {
+                alert('Por favor, preencha todos os campos antes de continuar.');
+            }
+        });
+    </script>
 
 </body>
 
