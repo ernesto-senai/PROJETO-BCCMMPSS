@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | Dumbooks</title>
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo Dumbooks">
+                <span class="site-name">Dumbooks</span>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
+            </div>
+
+            <div class="user-actions">
+                <a href="carrinho.html" class="icon-link">
+                    <img src="../img/sacola.png" alt="Sacola">
+                </a>
+                <a href="login.html" class="icon-link logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </a>
+            </div>
+        </nav>
+
+        <div class="categories">
+            <a href="pagina-inicial.html">Início</a>
+            <a href="#">Internacional</a>
+            <a href="#">HQ</a>
+            <a href="#">Livros</a>
+            <a href="#">Jovens</a>
+            <a href="#">Geek</a>
+        </div>
+    </header>
+
+    <main class="profile-container">
+        
+        <aside class="profile-sidebar">
+            <div class="user-brief">
+                <div class="avatar-circle">
+                    <span>U</span>
+                </div>
+                <h3>Olá, Usuário!</h3>
+                <p>usuario@email.com</p>
+            </div>
+            
+            <nav class="profile-menu">
+                <button class="menu-btn active" onclick="showTab('dados')">
+                    <i class="fa-solid fa-user"></i> Meus Dados
+                </button>
+                <button class="menu-btn" onclick="showTab('pedidos')">
+                    <i class="fa-solid fa-book-open"></i> Minha Biblioteca
+                </button>
+                <button class="menu-btn" onclick="showTab('seguranca')">
+                    <i class="fa-solid fa-lock"></i> Segurança
+                </button>
+            </nav>
+        </aside>
+
+        <section class="profile-content">
+            
+            <div id="dados" class="tab-content active">
+                <h2>Meus Dados Pessoais</h2>
+                <form class="form-dados">
+                    <div class="input-group">
+                        <label>Nome Completo</label>
+                        <input type="text" value="Usuário de Teste" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" value="usuario@email.com" required>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label>CPF</label>
+                            <input type="text" value="123.456.789-00" disabled style="background: #eee;">
+                        </div>
+                        <div class="input-group">
+                            <label>Telefone</label>
+                            <input type="tel" value="(11) 99999-9999">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                </form>
+            </div>
+
+            <div id="pedidos" class="tab-content" style="display: none;">
+                <h2>Minha Biblioteca (Pedidos Recentes)</h2>
+                
+                <div class="pedido-card">
+                    <div class="pedido-header">
+                        <span><strong>Pedido #4520</strong> - 17/11/2025</span>
+                        <span class="status entregue">Entregue</span>
+                    </div>
+                    <div class="pedido-body">
+                        <img src="../img/verity (1).png" alt="Capa Livro" class="book-thumb">
+                        <div class="pedido-info">
+                            <h4>O amor é um cientista bagunceiro</h4>
+                            <p>R$ 49,90</p>
+                            <a href="#" class="btn-ler">Ler Amostra</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pedido-card">
+                    <div class="pedido-header">
+                        <span><strong>Pedido #4100</strong> - 10/10/2025</span>
+                        <span class="status entregue">Entregue</span>
+                    </div>
+                    <div class="pedido-body">
+                        <img src="../img/hipotese.png" alt="Capa Livro" class="book-thumb">
+                        <div class="pedido-info">
+                            <h4>A hipótese do amor</h4>
+                            <p>R$ 39,90</p>
+                            <a href="#" class="btn-ler">Ler Amostra</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="seguranca" class="tab-content" style="display: none;">
+                <h2>Alterar Senha</h2>
+                <form class="form-dados">
+                    <div class="input-group">
+                        <label>Senha Atual</label>
+                        <input type="password">
+                    </div>
+                    <div class="input-group">
+                        <label>Nova Senha</label>
+                        <input type="password">
+                    </div>
+                    <div class="input-group">
+                        <label>Confirmar Nova Senha</label>
+                        <input type="password">
+                    </div>
+                    <button type="submit" class="btn-salvar">Atualizar Senha</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            // Esconde todas as abas
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
+            
+            // Remove a classe 'active' de todos os botões
+            document.querySelectorAll('.menu-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostra a aba selecionada
+            document.getElementById(tabId).style.display = 'block';
+            
+            // Adiciona classe active no botão clicado (truque simples usando o evento click)
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

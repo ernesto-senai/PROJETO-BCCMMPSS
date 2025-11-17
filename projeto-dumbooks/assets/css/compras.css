@@ -1,0 +1,235 @@
+/* --- Reset Global e Body --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Boa prática para controle de layout */
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
+}
+
+/* --- Estilos do Header (Consistente com o 'carrinho.css') --- */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #004d40);
+  padding: 30px 30px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  margin-right: 20px;
+}
+
+.site-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.search {
+  flex: 1;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+}
+
+.cart img {
+  height: 70px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  padding: 12px 0;
+}
+
+.categories a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.categories a:hover {
+  text-decoration: underline;
+}
+
+/* --- Layout Principal da Página do Produto --- */
+.container-produto {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+  justify-content: space-between;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 20px auto; /* Centraliza o container */
+}
+
+/* Coluna 1: Imagem */
+.galeria-produto {
+  flex: 1; /* Ocupa 1 parte do espaço */
+  min-width: 300px;
+}
+
+.galeria-produto img {
+  width: 100%; /* Imagem responsiva */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Coluna 2: Informações */
+.info-produto {
+  flex: 2; /* Ocupa 2 partes (mais espaço) */
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaçamento entre os itens */
+}
+
+.info-produto h2 {
+  font-size: 2.2em;
+  color: #023514;
+}
+
+.info-produto .autor,
+.info-produto .classificacao {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.info-produto .avaliacao {
+  font-size: 1.2em;
+  color: #f0c14b; /* Cor de estrela */
+}
+
+.info-produto .descricao {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.info-produto .preco {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #104d1e;
+  margin-top: 10px;
+}
+
+.botoes-acao {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Coluna 3: Comentários */
+.secao-comentarios {
+  flex: 1; /* Ocupa 1 parte do espaço */
+  min-width: 300px;
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.secao-comentarios h3 {
+  color: #104d1e;
+}
+
+.secao-comentarios textarea {
+  width: 100%;
+  height: 150px; /* Altura melhor para comentários */
+  padding: 10px;
+  border: 1px solid #978a7e;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1em;
+}
+
+/* --- Estilos dos Componentes (Seletor Qtd, Botões) --- */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.quantity-selector button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.quantity-selector input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.button-37,
+.button-38 {
+  margin-top: 0; /* Removido o 'margin-top' fixo */
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+/* Botão "Adicionar ao carrinho" (Estilo vazado) */
+.button-38 {
+  background-color: #ffffff;
+  border-color: #13aa52;
+  color: #13aa52;
+}
+
+.button-38:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37,
+  .button-38 {
+    padding: 10px 30px;
+  }
+}

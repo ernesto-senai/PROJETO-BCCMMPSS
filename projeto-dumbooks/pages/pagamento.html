@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento | Dumbooks</title>
+    <link rel="stylesheet" href="../assets/css/pagamento.css">
+</head>
+ 
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <img src="../assets/img/logo.png" alt="Logo Dumbooks">
+                <span class="site-name">Dumbooks</span>
+            </div>
+            <div class="search-box">
+                <input type="text" class="search" placeholder=" 🔍 Qual a escolha de hoje...">
+            </div>
+            <div class="cart">
+                <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+            </div>
+        </nav>
+ 
+        <div class="categories">
+            <a href="#">Internacional</a>
+            <a href="#">HQ</a>
+            <a href="#">Livros</a>
+            <a href="#">Jovens</a>
+            <a href="#">Crianças</a>
+            <a href="#">Geek</a>
+        </div>
+    </header>
+ 
+    <main class="container">
+        <section class="resumo-pedido">
+            <h2>Resumo do pedido</h2>
+            <div class="produto">
+                <img src="../assets/img/livro.webp" alt="Saga The Witcher">
+                <div class="detalhes-produto">
+                    <h3>Saga The Witcher</h3>
+                    <p class="preco">R$ 589,99</p>
+                    <div class="endereco-box">
+                        <strong>Endereço de entrega:</strong>
+                        <p>R. Direita, 955 – Vila Santo Antônio, Cotia - SP</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="total-box">
+                <p>Total: <span>R$ 589,99</span></p>
+            </div>
+ 
+            <div class="botoes-acao">
+                <button class="btn-cancelar" onclick="window.history.back()">Cancelar</button>
+                <button class="btn-finalizar" id="btnFinalizar">Finalizar Compra</button>
+            </div>
+        </section>
+ 
+        <section class="pagamento-section">
+            <h2>Método de pagamento</h2>
+            <form id="formPagamento">
+                <div class="opcoes-pagamento">
+                    <label class="radio-label">
+                        <input type="radio" name="metodo" checked>
+                        <span>Cartão de Crédito/Débito</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="metodo">
+                        <span>Pix</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="metodo">
+                        <span>Boleto</span>
+                    </label>
+                </div>
+ 
+                <h3>Dados do cartão</h3>
+               
+                <div class="input-group">
+                    <label>Nome do Titular</label>
+                    <input type="text" placeholder="Como impresso no cartão" required>
+                </div>
+ 
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Validade</label>
+                        <input type="text" placeholder="MM/AA" maxlength="5" required>
+                    </div>
+                    <div class="input-group">
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" maxlength="3" required>
+                    </div>
+                </div>
+ 
+                <div class="input-group">
+                    <label>Número do Cartão</label>
+                    <input type="text" placeholder="0000 0000 0000 0000" required>
+                </div>
+ 
+                <div class="input-group">
+                    <label>Cupom de desconto</label>
+                    <input type="text" placeholder="Código do cupom">
+                </div>
+            </form>
+        </section>
+    </main>
+ 
+    <script>
+        // Script simples para simular o envio
+        document.getElementById('btnFinalizar').addEventListener('click', function(e) {
+            e.preventDefault();
+           
+            // Simula validação simples
+            const form = document.getElementById('formPagamento');
+            if(form.checkValidity()) {
+                // Redireciona para a página que arrumamos anteriormente
+                window.location.href = 'compra-finalizada.html';
+            } else {
+                alert("Por favor, preencha os dados do cartão.");
+                form.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>
+ 

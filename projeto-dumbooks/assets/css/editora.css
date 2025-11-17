@@ -1,0 +1,203 @@
+/* --- Reset Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+}
+
+/* --- Header --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 20px 30px;
+    color: white;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Ajustado para não ficar gigante */
+    margin-right: 15px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search {
+    flex: 1;
+    max-width: 600px; /* Limita a largura em telas grandes */
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.cart img {
+    height: 40px;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: opacity 0.2s;
+}
+
+.categories a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* --- Banner --- */
+.banner {
+    width: 95%;
+    max-width: 1200px; /* Evita que fique largo demais em monitores 4k */
+    height: 300px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Título da Seção --- */
+.titulo-secao {
+    margin-left: 5%; /* Alinha visualmente com o grid */
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #555;
+    border-bottom: 2px solid #00796b;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- Grid de Cards --- */
+.contentCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Gap ajustado */
+    padding: 20px 5%;
+    margin-bottom: 50px;
+}
+
+/* --- Estilo do Card (Unificado) --- */
+.card {
+    width: 220px;
+    height: 420px; /* Altura fixa para todos ficarem iguais */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column; /* Organiza verticalmente */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito ao passar o mouse */
+}
+
+/* Área da imagem dentro do card */
+.img-container {
+    width: 100%;
+    height: 250px; /* Altura fixa para a imagem */
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.livro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a capa preencha sem distorcer */
+}
+
+/* Área do texto */
+.escrita {
+    padding: 15px;
+    text-align: center;
+    flex: 1; /* Ocupa o espaço restante para empurrar o botão para baixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.escrita h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    /* Limita o texto a 2 linhas para não quebrar o layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.autor {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Botão Veja Mais */
+.vermais {
+    display: block;
+    text-align: center;
+    background-color: #004d40;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.vermais:hover {
+    background-color: #00796b;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .search {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .banner {
+        height: 150px; /* Banner menor no celular */
+    }
+}
