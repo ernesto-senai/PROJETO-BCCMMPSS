@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compra Finalizada</title>
+    <title>Compra Finalizada | Dumbooks</title>
     <link rel="stylesheet" href="../style/compra-finalizada.css">
 </head>
 <body>
- <header>
+
+    <header>
         <nav class="top-nav">
             <div class="logo">
                 <img src="../img/logo.png" alt="Logo Dumbooks">
                 <span class="site-name">Dumbooks</span>
             </div>
-            <input type="text" class="search" placeholder=" 🔍 Qual a escolha de hoje...">
+            
+            <div class="search-box">
+                <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
+            </div>
+
             <div class="cart">
                 <img src="../img/sacola.png" alt="Sacola de compras">
             </div>
@@ -28,27 +33,33 @@
             <a href="#">Geek</a>
         </div>
     </header>
-      <center>
-    <h1 id="escrita">Compra Finalizada!</h1>
-    <center><img src="../img/concluido.png" alt="Compra finalizada" id="img-compraFinalizada"></center>
-        <div class="container">
-    <p id> Seu pedido ja foi recebido, ele esta disponivel na sua </p> <a href="biblioteca.html" id="link">biblioteca!</a> 
-    </div>
-    <button id="botoes" >
-        Voltar para a tela inicial!
-    </button>
-      
-    
-    
+
+    <main class="main-content">
+        <h1>Compra Finalizada!</h1>
+        
+        <img src="../img/concluido.png" alt="Ícone de sucesso" class="img-sucesso">
+        
+        <div class="mensagem-sucesso">
+            <p>Seu pedido já foi recebido e está disponível na sua <a href="biblioteca.html" class="link-biblioteca">biblioteca!</a></p>
+        </div>
+
+        <a href="index.html" class="btn-voltar">Voltar para a tela inicial!</a>
+    </main>
+
     <footer>
-        <p>&copy; 2025 - Todos os direitos reservados</p>
-        <nav>
-            <p>Termos de uso</a>
-            <p>Política de privacidade</p>
-            <p>Sobre nós:</p>
-            <p>Dumbooks é um site onde você pode comprar ou alugar livros de diversos gêneros, com praticidade e economia.
-               Ideal para quem ama ler e quer flexibilidade na hora de escolher suas leituras.</p>
-        </nav>
+        <div class="footer-content">
+            <nav class="footer-links">
+                <a href="#">Termos de uso</a>
+                <a href="#">Política de privacidade</a>
+            </nav>
+            
+            <div class="footer-about">
+                <p><strong>Sobre nós:</strong></p>
+                <p>Dumbooks é um site onde você pode comprar ou alugar livros de diversos gêneros, com praticidade e economia. Ideal para quem ama ler e quer flexibilidade na hora de escolher suas leituras.</p>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 - Todos os direitos reservados</p>
     </footer>
+
 </body>
 </html>
