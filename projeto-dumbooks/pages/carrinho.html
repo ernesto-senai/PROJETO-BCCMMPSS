@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Carrinho - Dumbooks</title>
-  <link rel="stylesheet" href="../style/carrinho.css">
+  <link rel="stylesheet" href="../assets/css/carrinho.css">
 </head>
 
 <body>
@@ -92,6 +92,53 @@
       </aside>
 
     </div></main>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Seletores robustos (usando classes, não índices)
+    const btnAumentar = document.querySelector('.btn-aumentar');
+    const btnDiminuir = document.querySelector('.btn-diminuir');
+    const qtdSpan = document.querySelector('.quantidade span');
+    const precoUnitarioEl = document.querySelector('.item-detalhes .preco');
+    const precoTotalEl = document.querySelector('.item-detalhes .preco-total');
+    const resumoTotalEl = document.querySelector('.resumo-pedido .preco'); // Ajuste se necessário
+    
+    // Obtém o preço numérico (remove "R$", espaços e troca vírgula por ponto)
+    let precoBase = parseFloat(precoUnitarioEl.innerText.replace('R$', '').replace(',', '.').trim());
+    let quantidade = 1;
+
+    function atualizarTela() {
+        // Atualiza o número visual
+        qtdSpan.innerText = quantidade;
+
+        // Calcula total
+        let total = (precoBase * quantidade).toFixed(2);
+        
+        // Formata para Real (R$ X,XX)
+        let totalFormatado = total.replace('.', ',');
+
+        // Atualiza os textos na tela
+        precoTotalEl.innerText = `R$ ${totalFormatado}`;
+        
+        // Verifica se o elemento de resumo existe antes de tentar alterar
+        if(resumoTotalEl) {
+            resumoTotalEl.innerText = `R$ ${totalFormatado}`;
+        }
+    }
+
+    btnAumentar.addEventListener('click', () => {
+        quantidade++;
+        atualizarTela();
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+        if (quantidade > 1) {
+            quantidade--;
+            atualizarTela();
+        }
+    });
+});
+</script>
 
 </body>
 </html>

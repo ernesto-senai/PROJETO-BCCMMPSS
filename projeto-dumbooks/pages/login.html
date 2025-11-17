@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/login.css">
+  <link rel="stylesheet" href="../assets/css/login.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
   <div class="container">
     <div class="formulario-container">
       
-      <form action="/signin" method="post">
+      <form onsubmit="fazerLogin(event)">
         
         <h1>Sign In</h1>
 
@@ -58,6 +58,26 @@
       <img src="../img/professional-graphic-bi-me.webp" alt="Ilustração de uma pessoa analisando gráficos em um painel">
     </div>
   </div>
+
+  <script>
+    function fazerLogin(event) {
+        // 1. O preventDefault impede que a página recarregue ou dê erro
+        event.preventDefault(); 
+
+        // 2. Pega o valor que a pessoa digitou no campo de usuário
+        const usuario = document.getElementById('username').value;
+        const senha = document.getElementById('password').value;
+
+        // 3. Validação simples (só para garantir que não está vazio)
+        if (usuario === "" || senha === "") {
+            alert("Por favor, preencha todos os campos!");
+        } else {
+            // 4. Se estiver tudo preenchido, redireciona para a Home
+            // Simula que o login deu certo
+            window.location.href = "pagina-inicial.html";
+        }
+    }
+</script>
 </body>
 
 </html>
