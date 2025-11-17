@@ -175,64 +175,59 @@ body {
 }
 
 footer {
-  background-color: #004d40;
-  color: white;
-  padding: 20px;
-  text-align:center;
-  
+    background-color: #004d40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
 }
 
 footer a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
-.escrita{
+.escrita {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #004d40;
-     font-size: 14px;
+    font-size: 14px;
 
 }
 
-.vendidos{
-     font-size: 9px;
+.vendidos {
+    font-size: 9px;
 }
 
 .book-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    flex: 1;
 }
 
 .book-card {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8 px;
-  text-align: center;
-  box-shadow: 0 0 2px rgba(0,0,0,0.1);
-  width: 200px;
-  height: 400px;
-  
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8 px;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 400px;
+
 }
 
 .book-card img {
-  width: 120px;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 0.5rem;
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
 }
 
 .book-card h3 {
-  font-size: 1rem;
-  margin: 0.5rem 0;
+    font-size: 1rem;
+    margin: 0.5rem 0;
 }
 
-
-
-
-
-
-
-
-
+.Livros {
+ max-height: 270px;
+}
