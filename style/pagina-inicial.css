@@ -4,6 +4,7 @@ body {
     background-color: #fffaf0;
 }
 
+/* --- ESTILOS DO HEADER (Inalterado) --- */
 .top-nav {
     display: flex;
     align-items: center;
@@ -60,11 +61,10 @@ body {
     text-decoration: underline;
 }
 
+/* --- CONTEÚDO PRINCIPAL --- */
 .banner {
     max-width: 1800px;
-    /* largura maior */
     height: 350px;
-    /* altura maior */
     margin: 25px auto;
     border-radius: 10px;
     overflow: hidden;
@@ -74,69 +74,108 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* garante que a imagem preencha sem distorcer */
     box-shadow: 2px 2px 5px #f0f0f0;
 }
 
-.card {
-    max-width: 400px;
-    box-shadow: 2px 2px 5px #bcc0b7;
+/* Título da seção (substitui .oi) */
+.section-title {
+    margin-left: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-
-
-
-
+    font-size: 1.5em; /* Aumentado */
+    font-weight: bold; /* Adicionado */
+    color: #004d40; /* Cor alterada */
 }
 
+/* Grid de Cards */
 .contentCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 70px;
+    gap: 50px; /* Reduzido o gap */
     padding: 20px;
 }
 
+/* Estilo do Card (limpo e sem altura fixa) */
 .card {
+    display: flex;
     flex-direction: column;
     width: 200px;
-    height: 390px;
+    /* height: 390px; <- REMOVIDO: Deixe o conteúdo definir a altura */
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
+    box-shadow: 2px 2px 5px #bcc0b7;
+    background-color: #ffffff; /* Adicionado fundo branco */
+    transition: transform 0.3s ease;
 }
 
-
-.oi {
-    margin-left: 60px;
-    font-size: larger;
-    color: #767775;
+.card:hover {
+    transform: translateY(-5px); /* Efeito suave ao passar o mouse */
 }
 
+.card-image {
+   width: 100%; /* Faz a imagem ocupar o card */
+   max-height: 270px;
+   object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.card-info {
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #004d40;
+    font-size: 14px;
+    flex-grow: 1; /* Faz esta div crescer para preencher o espaço */
+}
+
+.card-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card-author {
+    font-size: 12px; /* Aumentado de 9px */
+    color: #555;
+    margin: 0;
+}
+
+/* Estilo do Botão "Veja Mais" */
+.vermais {
+    display: block; /* Ocupa a largura toda */
+    background-color: #00796b;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: auto; /* Empurra o botão para o final do card */
+    transition: background-color 0.2s;
+}
+
+.vermais:hover {
+    background-color: #004d40;
+}
+
+/* Seção de Editoras */
 .editoras {
     text-align: center;
     margin: 40px 0;
-}
-
-.titulo-editoras {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #fdfdfb; /* Fundo levemente diferente */
 }
 
 .logos-editoras {
     display: flex;
     justify-content: center;
-    gap: 90px;
+    gap: 40px; /* Reduzido o gap */
     flex-wrap: wrap;
+    margin-top: 30px; /* Removido do .titulo-editoras */
 }
 
 .logo-item {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Reduzido */
+    height: 120px; /* Reduzido */
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
@@ -154,80 +193,66 @@ body {
 }
 
 
+/* --- CÓDIGO REMOVIDO --- */
+/* .card (primeira definição) -> Removido por duplicidade.
+.content-meio, .meio -> Removido por não ser usado.
+.book-grid, .book-card -> Removido por não ser usado.
+.titulo-editoras -> Removido e substituído por .section-title.
+*/
 
-.meio {
 
-    margin: auto;
-    background: #000;
-    width: 350px;
-    height: 500px;
-    padding: 10px;
-    border-radius: 1rem;
-}
-
-.content-meio {
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    flex-wrap: wrap;
-
-}
-
+/* --- ESTILOS DO FOOTER --- */
 footer {
     background-color: #004d40;
     color: white;
-    padding: 20px;
-    text-align: center;
-
+    padding: 40px 20px;
+    text-align: left;
+    margin-top: 50px;
 }
 
-footer a {
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-about, .footer-links {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-about h3, .footer-links h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #00796b;
+    padding-bottom: 5px;
+}
+
+.footer-about p {
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.footer-links a {
     color: white;
     text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: text-decoration 0.2s;
 }
 
-.escrita {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #004d40;
-    font-size: 14px;
-
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
-.vendidos {
-    font-size: 9px;
-}
-
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 1rem;
-    flex: 1;
-}
-
-.book-card {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 8 px;
+.footer-copy {
     text-align: center;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    height: 400px;
-
-}
-
-.book-card img {
-    width: 120px;
-    height: 180px;
-    object-fit: cover;
-    margin-bottom: 0.5rem;
-}
-
-.book-card h3 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-}
-
-.Livros {
- max-height: 270px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #00796b;
+    font-size: 0.9em;
 }
