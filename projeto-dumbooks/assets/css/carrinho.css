@@ -236,4 +236,14 @@ button {
 .finalizar {
   background: #104d1e;
   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  
+  
 }
