@@ -138,6 +138,7 @@ body {
 
 /* Grid de Cards */
 .contentCards {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -147,6 +148,7 @@ body {
 
 /* Estilo do Card (limpo e sem altura fixa) */
 .card {
+        /* font-family: 'Segoe UI'; */
     display: flex;
     flex-direction: column;
     width: 200px;
