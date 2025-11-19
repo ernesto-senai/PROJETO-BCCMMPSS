@@ -1,0 +1,177 @@
+/* --- Reset e Global --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no final se a tela for grande */
+}
+
+/* --- Header --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 20px 30px;
+    color: white;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px; /* Ajustado para um tamanho padrão de logo */
+    height: auto;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.cart img {
+    height: 40px; /* Ajustado para não ficar gigante */
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: opacity 0.3s;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+/* --- Main Content (Área da Compra Finalizada) --- */
+.main-content {
+    flex: 1; /* Ocupa o espaço disponível empurrando o footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Substitui o <center> */
+    justify-content: center;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    color: #004d40;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.img-sucesso {
+    width: 250px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.mensagem-sucesso {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.link-biblioteca {
+    color: #00796b;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-voltar {
+    background-color: #104d1e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-voltar:hover {
+    background-color: #0b3815;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: auto; /* Segurança extra para ficar no fundo */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #a7ffeb;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9em;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-about p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+
+.copyright {
+    font-size: 0.8em;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}

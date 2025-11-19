@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Carrinho - Dumbooks</title>
+  <link rel="stylesheet" href="../assets/css/carrinho.css">
+</head>
+
+<body>
+  <header>
+    <nav class="top-nav">
+      <div class="logo">
+        <img src="../assets/img/logo.png" alt="Logo Dumbooks">
+        <span class="site-name">Dumbooks</span>
+      </div>
+      <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
+      <div class="cart">
+        <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+      </div>
+    </nav>
+
+    <div class="categories">
+      <a href="#">Internacional</a>
+      <a href="#">HQ</a>
+      <a href="#">Livros</a>
+      <a href="#">Jovens</a>
+      <a href="#">Crianças</a>
+      <a href="#">Geek</a>
+    </div>
+  </header>
+
+  <main class="carrinho-main">
+    <h3>Inicio > CARRINHO</h3>
+    <hr>
+    <h1>Carrinho</h1>
+
+    <div class="carrinho-container">
+
+      <section class="lista-produtos">
+        
+        <div class="produto-header">
+          <span class="header-produto">Produto</span>
+          <div class="header-detalhes">
+            <span>Preço</span>
+            <span>Quantidade</span>
+            <span>Total</span>
+            <span></span>
+          </div>
+        </div>
+        <hr>
+
+        <div class="produto-item">
+          <div class="item-info">
+            <img src="../assets/img/livro.webp" alt="Saga The Witcher">
+            <h4>Saga The Witcher</h4>
+          </div>
+          <div class="item-detalhes">
+            <p class="preco">R$ 589,99</p>
+            <div class="quantidade">
+              <button class="btn-diminuir">-</button>
+              <span>1</span>
+              <button class="btn-aumentar">+</button>
+            </div>
+            <p class="preco-total">R$ 589,99</p>
+            <button class="remover-item">×</button>
+          </div>
+        </div>
+
+        </section>
+
+      <aside class="resumo-container">
+        <section class="resumo-pedido">
+          <h2>Resumo do pedido</h2>
+          <div class="produto">
+            <img src="../assets/img/livro.webp" alt="Saga The Witcher">
+            <div>
+              <h3>Saga The Witcher</h3>
+              <p class="preco">R$ 589,99</p>
+              <p class="endereco">
+                Endereço Cadastrado<br>
+                R. Direita, 955 – Vila Santo Antônio, Cotia - SP
+              </p>
+            </div>
+          </div>
+          
+          <div class="botoes">
+            <button class="cancelar">Cancelar pedido</button>
+            <button class="finalizar">Finalizar Compra!</button>
+          </div>
+        </section>
+      </aside>
+
+    </div></main>
+
+    <script>
+    // Selecionando elementos
+    const btnAumentar = document.querySelector('.btn-aumentar');
+    const btnDiminuir = document.querySelector('.btn-diminuir');
+    const qtdSpan = document.querySelector('.quantidade span');
+    const precoUnitarioEl = document.querySelector('.item-detalhes .preco');
+    const precoTotalEl = document.querySelector('.item-detalhes .preco-total');
+    
+    // Tenta pegar o resumo do pedido (caso exista na tela)
+    const resumoTotalEl = document.querySelector('.resumo-pedido .preco'); 
+
+    // Limpeza do valor (transforma "R$ 49,90" em 49.90 numérico)
+    let precoTexto = precoUnitarioEl.innerText.replace('R$', '').replace('.', '').replace(',', '.').trim();
+    let precoBase = parseFloat(precoTexto);
+    let quantidade = 1;
+
+    function atualizarTela() {
+        // Atualiza quantidade visual
+        qtdSpan.innerText = quantidade;
+
+        // Calcula novo total
+        let total = precoBase * quantidade;
+
+        // Formata para moeda brasileira (R$ 99,90)
+        let totalFormatado = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+        // Atualiza na lista de produtos
+        precoTotalEl.innerText = totalFormatado;
+
+        // Atualiza no resumo lateral (se existir)
+        if (resumoTotalEl) {
+            resumoTotalEl.innerText = totalFormatado;
+        }
+    }
+
+    btnAumentar.addEventListener('click', () => {
+        quantidade++;
+        atualizarTela();
+    });
+
+    btnDiminuir.addEventListener('click', () => {
+        if (quantidade > 1) { // Impede quantidade zero ou negativa
+            quantidade--;
+            atualizarTela();
+        }
+    });
+</script>
+
+</body>
+</html>
