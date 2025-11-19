@@ -145,123 +145,96 @@ body {
     /* Mantendo os originais ocultos ou removíveis, se não forem usados */
 }
 
-/* --- PRODUTOS E CARDS (ESTILO DA IMAGEM) --- */
+/* Grid de Cards */
 .contentCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
-    /* Reduzi o gap para o padrão de e-commerce */
+    gap: 50px; /* Reduzido o gap */
     padding: 20px;
 }
 
+/* Estilo do Card (limpo e sem altura fixa) */
 .card {
     display: flex;
     flex-direction: column;
-    width: 220px;
-    /* Largura ligeiramente maior para melhor visualização */
-    max-width: 220px;
-    height: auto;
-    /* Altura ajustável ao conteúdo */
+    width: 200px;
+    /* height: 390px; <- REMOVIDO: Deixe o conteúdo definir a altura */
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
-    /* O box-shadow da imagem é mais sutil na parte inferior */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    /* Fundo branco do card */
-    transition: transform 0.2s;
+    box-shadow: 2px 2px 5px #bcc0b7;
+    background-color: #ffffff; /* Adicionado fundo branco */
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    /* Efeito de elevação ao passar o mouse */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Efeito suave ao passar o mouse */
 }
 
 .card-image {
-    /* Utilizando a classe do seu HTML para a imagem */
-    width: 100%;
-    height: 300px;
-    /* Altura fixa para a imagem */
-    object-fit: cover;
-    /* Garante que a imagem preencha sem distorção */
-    display: block;
-    /* Removido o border-radius aqui, já que a imagem deve preencher o topo do card */
-}
-
-/* Corrigindo classes não utilizadas e substituindo por classes do HTML */
-.Livros,
-.escrita,
-.vendidos {
-    /* Estes foram substituídos abaixo ou são obsoletos, podem ser removidos */
-    display: none;
+   width: 100%; /* Faz a imagem ocupar o card */
+   max-height: 270px;
+   object-fit: cover; /* Garante que a imagem cubra o espaço */
 }
 
 .card-info {
-    /* Estilo para o bloco de texto (título e autor) */
-    padding: 15px 15px 10px 15px;
-    text-align: left;
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #004d40;
+    font-size: 14px;
+    flex-grow: 1; /* Faz esta div crescer para preencher o espaço */
 }
 
 .card-info h3 {
-    /* Título do Livro */
-    font-size: 1.2em;
-    color: #004d40;
-    margin: 0 0 5px 0;
-    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .card-author {
-    /* Autor */
-    font-size: 0.9em;
-    color: #767775;
+    font-size: 12px; /* Aumentado de 9px */
+    color: #555;
     margin: 0;
 }
 
+/* Estilo do Botão "Veja Mais" */
 .vermais {
-    /* Estilo do botão 'Veja mais' (Fundo Verde-água) */
-    background-color: #0c4b43;
-    /* Cor principal da barra de categorias */
+    display: block; /* Ocupa a largura toda */
+    background-color: #00796b;
     color: white;
+    padding: 12px 15px;
     text-align: center;
-    padding: 12px 0;
     text-decoration: none;
     font-weight: bold;
-    display: block;
-    /* Garante que o link ocupe toda a largura */
-    transition: background-color 0.3s;
+    font-size: 0.9em;
+    margin-top: auto; /* Empurra o botão para o final do card */
+    transition: background-color 0.2s;
 }
 
 .vermais:hover {
     background-color: #004d40;
-    /* Um tom mais escuro ao passar o mouse */
 }
 
-
-/* --- EDITORAS --- */
+/* Seção de Editoras */
 .editoras {
     text-align: center;
-    margin: 60px 0;
-}
-
-.titulo-editoras {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 50px;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fffaf0; /* Fundo levemente diferente */
 }
 
 .logos-editoras {
     display: flex;
     justify-content: center;
-    gap: 90px;
+    gap: 40px; /* Reduzido o gap */
     flex-wrap: wrap;
+    margin-top: 30px; /* Removido do .titulo-editoras */
+    background-color:#fffaf0 ;
 }
 
 .logo-item {
-    width: 120px;
-    /* Reduzi um pouco o tamanho para mais coesão */
-    height: 120px;
+    width: 130px; /* Reduzido */
+    height: 130px; /* Reduzido */
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
@@ -271,18 +244,21 @@ body {
 .logo-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    /* Usar 'contain' para logos, evita cortes */
-    padding: 10px;
-    /* Espaçamento interno para logos */
-    background-color: #fff;
+    object-fit: cover;
 }
 
 .logo-item:hover {
     transform: scale(1.05);
 }
 
-/* --- BLOCOS DE CONTEÚDO MEIO --- */
+
+/* --- CÓDIGO REMOVIDO --- */
+/* .card (primeira definição) -> Removido por duplicidade.
+.content-meio, .meio -> Removido por não ser usado.
+.book-grid, .book-card -> Removido por não ser usado.
+.titulo-editoras -> Removido e substituído por .section-title.
+*/
+
 .content-meio {
     margin: 2rem;
     display: flex;
@@ -304,7 +280,6 @@ body {
     padding: 10px;
     border-radius: 1rem;
 }
-
 /* --- FOOTER --- */
 /* Estilos gerais do footer já estão bons */
 
@@ -334,6 +309,50 @@ body {
 .social-icons .icon-btn:hover {
     background-color: #004d40;
 }
+
+
+
+
+
+/* --- EDITORAS --- */
+.Universos Literários {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title{
+    font-size: 1.2em;
+    font-weight:bold;
+    margin-bottom: 50px;
+}
+
+.logos-Literários {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.logo-Universos {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-Universos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+
 
 
 /* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
