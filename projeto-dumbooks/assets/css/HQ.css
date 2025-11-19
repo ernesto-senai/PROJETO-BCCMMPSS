@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+}
+
+/* --- ESTILOS DO HEADER (Inalterado) --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 30px 30px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search {
+    flex: 1;
+    margin: 0 30px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+}
+
+.cart img {
+    height: 70px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
