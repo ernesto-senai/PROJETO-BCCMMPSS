@@ -1,9 +1,18 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
     background-color: #fffaf1;
-}
 
+}
+/* fonte */
+
+    
+/* .tasa-explorer-<uniquifier> {
+
+  font-family: "TASA Explorer", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
 /* --- NAVEGAÇÃO SUPERIOR --- */
 .top-nav {
     display: flex;
