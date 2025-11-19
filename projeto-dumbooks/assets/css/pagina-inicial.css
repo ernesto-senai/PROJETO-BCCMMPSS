@@ -1,181 +1,203 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fffaf0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffaf0;
 }
 
-/* --- ESTILOS DO HEADER (Inalterado) --- */
 .top-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: linear-gradient(to right, #004d40, #010f0e);
-    padding: 30px 30px;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #004d40, #010f0e);
+  padding: 30px 30px;
+  color: white;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    height: 80px;
-    margin-right: 20px;
+  height: 80px;
+  margin-right: 20px;
 }
 
 .site-name {
-    font-size: 1.5em;
-    font-weight: bold;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .search {
-    flex: 1;
-    margin: 0 30px;
-    padding: 10px 12px;
-    border-radius: 20px;
-    border: none;
-    font-size: 1em;
+  flex: 1;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
 }
 
 .cart img {
-    height: 70px;
+  height: 70px;
 }
 
 .categories {
-    display: flex;
-    justify-content: center;
-    background-color: #00796b;
-    padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #00796b;
+  padding: 12px 0;
 }
 
 .categories a {
-    color: white;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1em;
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
 }
 
 .categories a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* --- CONTEÚDO PRINCIPAL --- */
-.banner {
-    max-width: 1800px;
-    height: 350px;
-    margin: 25px auto;
-    border-radius: 10px;
+/* --- CARROSSEL (Banner Principal) --- */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto 60px auto;
     overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: none;
+    padding: 6px;
 }
 
-.banner img {
-    width: 100%;
-    height: 100%;
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 99%;
+    height: 460px;
+    /* Altura do banner */
     object-fit: cover;
-    box-shadow: 2px 2px 5px #f0f0f0;
+    display: block;
+    border-radius: 15px;
+    padding: 2px;
 }
 
-/* Título da seção (substitui .oi) */
-.section-title {
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #74747485;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+}
+
+/* --- PRODUTOS E CARDS --- */
+.titulo {
+    font-size: 50px;
+    margin: 40px;
+    text-align: center;
+}
+
+.oi {
     margin-left: 60px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 1.5em; /* Aumentado */
-    font-weight: bold; /* Adicionado */
-    color: #004d40; /* Cor alterada */
+    font-size: larger;
+    color: #767775;
 }
 
-/* Grid de Cards */
 .contentCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px; /* Reduzido o gap */
+    gap: 70px;
     padding: 20px;
 }
 
-/* Estilo do Card (limpo e sem altura fixa) */
 .card {
-    display: flex;
     flex-direction: column;
     width: 200px;
-    /* height: 390px; <- REMOVIDO: Deixe o conteúdo definir a altura */
+    max-width: 200px;
+    height: 390px;
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
     box-shadow: 2px 2px 5px #bcc0b7;
-    background-color: #ffffff; /* Adicionado fundo branco */
-    transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px); /* Efeito suave ao passar o mouse */
+.Livros {
+    max-height: 270px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.card-image {
-   width: 100%; /* Faz a imagem ocupar o card */
-   max-height: 270px;
-   object-fit: cover; /* Garante que a imagem cubra o espaço */
-}
-
-.card-info {
-    padding: 15px;
+.escrita {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #004d40;
     font-size: 14px;
-    flex-grow: 1; /* Faz esta div crescer para preencher o espaço */
+    padding: 10px;
 }
 
-.card-info h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+.vendidos {
+    font-size: 9px;
 }
 
-.card-author {
-    font-size: 12px; /* Aumentado de 9px */
-    color: #555;
-    margin: 0;
-}
-
-/* Estilo do Botão "Veja Mais" */
-.vermais {
-    display: block; /* Ocupa a largura toda */
-    background-color: #00796b;
-    color: white;
-    padding: 12px 15px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9em;
-    margin-top: auto; /* Empurra o botão para o final do card */
-    transition: background-color 0.2s;
-}
-
-.vermais:hover {
-    background-color: #004d40;
-}
-
-/* Seção de Editoras */
+/* --- EDITORAS --- */
 .editoras {
     text-align: center;
     margin: 40px 0;
-    padding: 20px;
-    background-color: #fdfdfb; /* Fundo levemente diferente */
+}
+
+.titulo-editoras {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .logos-editoras {
     display: flex;
     justify-content: center;
-    gap: 40px; /* Reduzido o gap */
+    gap: 90px;
     flex-wrap: wrap;
-    margin-top: 30px; /* Removido do .titulo-editoras */
 }
 
 .logo-item {
-    width: 120px; /* Reduzido */
-    height: 120px; /* Reduzido */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
@@ -192,67 +214,158 @@ body {
     transform: scale(1.05);
 }
 
+/* --- BLOCOS DE CONTEÚDO MEIO --- */
+.content-meio {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
 
-/* --- CÓDIGO REMOVIDO --- */
-/* .card (primeira definição) -> Removido por duplicidade.
-.content-meio, .meio -> Removido por não ser usado.
-.book-grid, .book-card -> Removido por não ser usado.
-.titulo-editoras -> Removido e substituído por .section-title.
-*/
+.card-meio {
+    width: 30%;
+    max-width: 350px;
+}
 
+.meio {
+    margin: auto;
+    background: #000;
+    width: 100%;
+    height: 500px;
+    padding: 10px;
+    border-radius: 1rem;
+}
 
-/* --- ESTILOS DO FOOTER --- */
+/* --- FOOTER --- */
 footer {
     background-color: #004d40;
     color: white;
-    padding: 40px 20px;
-    text-align: left;
-    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-.footer-about, .footer-links {
-    flex: 1;
-    min-width: 300px;
-}
-
-.footer-about h3, .footer-links h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #00796b;
-    padding-bottom: 5px;
-}
-
-.footer-about p {
-    line-height: 1.6;
-    color: #f0f0f0;
-}
-
-.footer-links a {
+footer a {
     color: white;
     text-decoration: none;
-    display: block;
+}
+
+/* --- ESTILOS GERAIS DO FOOTER --- */
+footer {
+    background: linear-gradient(to right, #004d40, #010f0e); /* Fundo azul escuro */
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px 5%; /* Espaçamento interno */
+    border-top: 2px solid #233463; /* Linha de divisão sutil no topo */
+}
+
+/* Container que alinha as colunas no centro */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto; /* Espaço antes da seção inferior */
+    gap: 20px;
+    flex-wrap: wrap; /* Para garantir que funcione em telas menores */
+}
+
+.footer-column {
+    flex-basis: 18%; /* Garante que 5 colunas caibam na linha (5 * 18% = 90%) */
+    min-width: 150px; /* Garante que não fiquem muito estreitas */
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
     margin-bottom: 10px;
-    transition: text-decoration 0.2s;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+.footer-column a {
+    color: #c4c4c4; /* Cor do link cinza claro */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
-.footer-copy {
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+
+/* --- SEÇÃO INFERIOR (PAGAMENTO E SOCIAL) --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #feffff;
+    padding-top: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+}
+
+.payment-info, .social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px; /* Para telas pequenas */
+}
+
+.payment-info p, .social-media p {
+    font-size: 0.9rem;
+    color: #c4c4c4;
+    margin: 0;
+}
+
+/* Ícones de Cartão */
+.card-icons img {
+    height: 25px; /* Altura das bandeiras de cartão */
+    margin-right: 5px;
+}
+
+/* Ícones Sociais (Ajuste se estiver usando ícones Font Awesome) */
+.social-icons .icon-btn {
+    font-family: FontAwesome, sans-serif; /* Use o nome da sua fonte de ícones */
+    background-color: #0a4621; /* Fundo do botão */
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #00796b;
-    font-size: 0.9em;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+/* Estilos para telas menores (Responsividade) */
+@media (max-width: 768px) {
+    .footer-content {
+        justify-content: space-around;
+        gap: 40px;
+    }
+    .footer-column {
+        flex-basis: 40%; /* 2 colunas por linha */
+    }
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .payment-info, .social-media {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 }

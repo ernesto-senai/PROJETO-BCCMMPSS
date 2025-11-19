@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Dumbooks - Página Inicial</title>
+    <title>Dumbooks</title>
     <link rel="stylesheet" href="../assets/css/pagina-inicial.css">
 </head>
+
 
 <body>
     <header>
@@ -30,17 +31,54 @@
         </div>
     </header>
 
-    <main>
+    <section class="carousel" data-animate data-delay="0.4s">
 
-        <div class="banner">
-            <img src="../assets/img/bn1.png" alt="Banner Dumbooks">
+        <div class="carousel-track">
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/hobbit.png" alt="desconto">
+                </a>
+
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/peterpan.png" alt="Cadeira Luna">
+                </a>
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/natal.png" alt="Mesa Aurora">
+                </a>
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/promo.png" alt="Mesa Aurora">
+                </a>
+
+            </div>
+
         </div>
 
+        <div class="dots"></div>
+
+    </section>
+
+
+    <main>
+
+
+
         <h2 class="section-title">Livros mais vendidos:</h2>
-        
+
         <section class="contentCards">
             <div class="card">
-                <img class="card-image" src="../assets/img/verity.png" alt="Capa do livro Verity"/>
+                <img class="card-image" src="../assets/img/verity.png" alt="Capa do livro Verity" />
                 <div class="card-info">
                     <h3>Verity</h3>
                     <p class="card-author">Colleen Hoover</p>
@@ -49,7 +87,7 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/Assim que.png" alt="Capa do livro É Assim que Acaba"/>
+                <img class="card-image" src="../assets/img/Assim que.png" alt="Capa do livro É Assim que Acaba" />
                 <div class="card-info">
                     <h3>É Assim que Acaba</h3>
                     <p class="card-author">Colleen Hoover</p>
@@ -58,7 +96,7 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/O pequeno.png" alt="Capa do livro O Pequeno Príncipe"/>
+                <img class="card-image" src="../assets/img/O pequeno.png" alt="Capa do livro O Pequeno Príncipe" />
                 <div class="card-info">
                     <h3>O Pequeno Príncipe</h3>
                     <p class="card-author">Saint-Exupéry</p>
@@ -67,7 +105,8 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/vermelho.png" alt="Capa do livro Vermelho, Branco e Sangue Azul"/>
+                <img class="card-image" src="../assets/img/vermelho.png"
+                    alt="Capa do livro Vermelho, Branco e Sangue Azul" />
                 <div class="card-info">
                     <h3>Vermelho, Branco e Sangue Azul</h3>
                     <p class="card-author">Casey McQuiston</p>
@@ -76,7 +115,7 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/Divergente.png" alt="Capa do livro Divergente"/>
+                <img class="card-image" src="../assets/img/Divergente.png" alt="Capa do livro Divergente" />
                 <div class="card-info">
                     <h3>Divergente</h3>
                     <p class="card-author">Veronica Roth</p>
@@ -85,7 +124,8 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/como se .png" alt="Capa do livro Como se tornar um cristão inútil"/>
+                <img class="card-image" src="../assets/img/como se .png"
+                    alt="Capa do livro Como se tornar um cristão inútil" />
                 <div class="card-info">
                     <h3>Como se tornar um cristão inútil</h3>
                     <p class="card-author">Rodrigo Bibo</p>
@@ -116,10 +156,10 @@
         </section>
 
         <h2 class="section-title">Recomendações para você:</h2>
-        
+
         <section class="contentCards">
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor" />
                 <div class="card-info">
                     <h3>A hipótese do amor</h3>
                     <p class="card-author">Ali Hazelwood</p>
@@ -128,7 +168,7 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor" />
                 <div class="card-info">
                     <h3>A hipótese do amor</h3>
                     <p class="card-author">Ali Hazelwood</p>
@@ -137,7 +177,7 @@
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor" />
                 <div class="card-info">
                     <h3>A hipótese do amor</h3>
                     <p class="card-author">Ali Hazelwood</p>
@@ -150,22 +190,77 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-about">
-                <h3>Sobre nós:</h3>
-                <p>Dumbooks é um site onde você pode comprar ou alugar livros de diversos gêneros, com praticidade e economia.
-                   Ideal para quem ama ler e quer flexibilidade na hora de escolher suas leituras.</p>
+            <div class="footer-column">
+                <h4>O Compra Agora</h4>
+                <ul>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Nossos parceiros</a></li>
+                </ul>
             </div>
-            <div class="footer-links">
-                <h3>Links Úteis</h3>
-                <a href="#">Termos de uso</a>
-                <a href="#">Política de privacidade</a>
-                <a href="#">Fale conosco</a>
+
+            <div class="footer-column">
+                <h4>Como comprar</h4>
+                <ul>
+                    <li><a href="#">Primeiro acesso</a></li>
+                    <li><a href="#">Após e conclusão do pedido</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Nossas políticas</h4>
+                <ul>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Termos de uso - Distribuidor</a></li>
+                    <li><a href="#">Regras para uso</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Política de cookies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Portal do distribuidor</a></li>
+                    <li><a href="#">Seja um parceiro</a></li>
+                    <li><a href="#">Mapa do site</a></li>
+                    <li><a href="#">Venda Assistida</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Garantia de produto</a></li>
+                    <li><a href="#">Trocas e devoluções</a></li>
+                    <li><a href="#">Suporte Vendedor</a></li>
+                    <li><a href="#">Suporte Lojista</a></li>
+                </ul>
             </div>
         </div>
-        <div class="footer-copy">
-            <p>&copy; 2025 - Todos os direitos reservados</p>
+
+        <div class="footer-bottom">
+            <div class="payment-info">
+                <p>Segurança e pagamento</p>
+                <div class="card-icons">
+                    <img src="../img/visa.png" alt="Visa">
+                    <img src="../img/mastercard.png" alt="Mastercard">
+                    <img src="../img/elo.png" alt="Elo">
+                </div>
+            </div>
+
+            <div class="social-media">
+                <p>Siga-nos</p>
+                <div class="social-icons">
+                    <a href="#" class="icon-btn">&#xf09a;</a> <a href="#" class="icon-btn">&#xf16d;</a> <a href="#"
+                        class="icon-btn">&#xf0e1;</a> <a href="#" class="icon-btn">&#xf167;</a> <a href="#"
+                        class="icon-btn">&#xf1e0;</a>
+                </div>
+            </div>
         </div>
     </footer>
+    
 
+ <script src="../assets/js/pagian inicial.js"></script>
 </body>
+
 </html>
