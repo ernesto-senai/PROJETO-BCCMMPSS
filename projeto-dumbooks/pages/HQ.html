@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>HQ</title>
-    <link rel="stylesheet" href="../assets/css/HQ.css">
+    <link rel="stylesheet" href="../assets/css/categorias.css">
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header>
+     <header>
         <nav class="top-nav">
             <div class="logo">
                 <img src="../assets/img/logo.png" alt="Logo Dumbooks">
@@ -22,19 +25,52 @@
 
         <div class="categories">
             <a href="#">Internacional</a>
-            <a href="#">HQ</a>
+            <a href="HQ.html">HQ</a>
             <a href="#">Livros</a>
             <a href="#">Jovens</a>
-            <a href="#">Crianças</a>
-            <a href="#">Geek</a>
+            <a href="infantil.html">infantil</a>
+            <a href="geek.html">Geek</a>
         </div>
     </header>
 
-    <main>
+    <section class="carousel" data-animate data-delay="0.4s">
 
-        <div class="banner">
-            <img src="../assets/img/bn1.png" alt="Banner Dumbooks">
+        <div class="carousel-track">
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/hobbit.png" alt="desconto">
+                </a>
+
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/peterpan.png" alt="Cadeira Luna">
+                </a>
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/natal.png" alt="Mesa Aurora">
+                </a>
+
+            </div>
+
+            <div class="slide">
+                <a href="#">
+                    <img src="../assets/img/promo.png" alt="Mesa Aurora">
+                </a>
+
+            </div>
+
         </div>
+
+        <div class="dots"></div>
+
+    </section>
+
 
         <h2 class="section-title">Livros mais vendidos:</h2>
         
@@ -98,54 +134,80 @@
             <h2 class="section-title">Navegue por editora:</h2>
             <div class="logos-editoras">
                 <div class="logo-item">
-                    <img class="logo" src="../assets/img/MARVEL2.webp" alt="MARVEL">
+                   <a href="compraLivro2.html"><img class="logo" src="../assets/img/MARVEL2.webp" alt="MARVEL"></a>
                 </div>
                 <div class="logo-item">
-                    <img src="../assets/img/PANINI.webp" alt="PANINI">
+                    <a href="compraLivro3.html"><img src="../assets/img/PANINI.webp" alt="PANINI"></a>
                 </div>
                 <div class="logo-item">
-                    <img src="../assets/img/ed3.png" alt="Intrínseca">
+                    <a href=""><img src="../assets/img/dc.png" alt="Intrínseca"></a>
                 </div>
                 <div class="logo-item">
-                    <img src="../assets/img/ed2.avif" alt="Rocco">
+                    <a href=""><img src="../assets/img/RISCO.png" alt="Rocco"></a>
                 </div>
                 <div class="logo-item">
-                    <img src="../img/cherry.png" alt="Cherry">
+                    <a href=""><img src="../assets/img/BOOMSTUDIOS.png" alt="Cherry"></a>
                 </div>
             </div>
         </section>
 
-        <h2 class="section-title">Recomendações para você:</h2>
-        
+        <h2 class="section-title">Boxes:</h2>
+      
         <section class="contentCards">
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/CAPTAO-AMERICA.png" alt="Capa do livro Verity"/>
                 <div class="card-info">
-                    <h3>A hipótese do amor</h3>
-                    <p class="card-author">Ali Hazelwood</p>
+                    <h3>Verity</h3>
+                    <p class="card-author">Colleen Hoover</p>
                 </div>
                 <a class="vermais" href="ita.html">Veja mais</a>
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/DEADPOOL.png" alt="Capa do livro É Assim que Acaba"/>
                 <div class="card-info">
-                    <h3>A hipótese do amor</h3>
-                    <p class="card-author">Ali Hazelwood</p>
+                    <h3>É Assim que Acaba</h3>
+                    <p class="card-author">Colleen Hoover</p>
                 </div>
                 <a class="vermais" href="ita.html">Veja mais</a>
             </div>
 
             <div class="card">
-                <img class="card-image" src="../assets/img/lv1.jpg" alt="Capa do livro A hipótese do amor"/>
+                <img class="card-image" src="../assets/img/AVENGERS.png" alt="Capa do livro O Pequeno Príncipe"/>
                 <div class="card-info">
-                    <h3>A hipótese do amor</h3>
-                    <p class="card-author">Ali Hazelwood</p>
+                    <h3>O Pequeno Príncipe</h3>
+                    <p class="card-author">Saint-Exupéry</p>
+                </div>
+                <a class="vermais" href="ita.html">Veja mais</a>
+            </div>
+
+            <div class="card">
+                <img class="card-image" src="../assets/img/AMAZING-FANTASY.jpg" alt="Capa do livro Vermelho, Branco e Sangue Azul"/>
+                <div class="card-info">
+                    <h3>Vermelho, Branco e Sangue Azul</h3>
+                    <p class="card-author">Casey McQuiston</p>
+                </div>
+                <a class="vermais" href="ita.html">Veja mais</a>
+            </div>
+
+            <div class="card">
+                <img class="card-image" src="../assets/img/DOUTOR-ESTRANHO.jpg" alt="Capa do livro Divergente"/>
+                <div class="card-info">
+                    <h3>Divergente</h3>
+                    <p class="card-author">Veronica Roth</p>
+                </div>
+                <a class="vermais" href="ita.html">Veja mais</a>
+            </div>
+
+            <div class="card">
+                <img class="card-image" src="../assets/img/LIGA-DA-JUSTIÇA.png" alt="Capa do livro Como se tornar um cristão inútil"/>
+                <div class="card-info">
+                    <h3>Como se tornar um cristão inútil</h3>
+                    <p class="card-author">Rodrigo Bibo</p>
                 </div>
                 <a class="vermais" href="ita.html">Veja mais</a>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -166,6 +228,6 @@
             <p>&copy; 2025 - Todos os direitos reservados</p>
         </div>
     </footer>
-
+<script src="../assets/js/pagian inicial.js"></script>
 </body>
 </html>

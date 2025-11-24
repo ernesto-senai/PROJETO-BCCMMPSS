@@ -220,7 +220,7 @@ body {
     text-align: center;
     margin: 40px 0;
     padding: 20px;
-    background-color: #fffaf0; /* Fundo levemente diferente */
+
 }
 
 .logos-editoras {
@@ -229,7 +229,7 @@ body {
     gap: 40px; /* Reduzido o gap */
     flex-wrap: wrap;
     margin-top: 30px; /* Removido do .titulo-editoras */
-    background-color:#fffaf0 ;
+
 }
 
 .logo-item {
@@ -322,7 +322,6 @@ body {
 
 .section-title{
     font-size: 1.2em;
-    font-weight:;
     margin-bottom: 50px;
 }
 
