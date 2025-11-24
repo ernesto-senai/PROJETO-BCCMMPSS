@@ -1,0 +1,42 @@
+/* carrossel */
+ 
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".carousel-track");
+  const slides = Array.from(track.children);
+  const dotsContainer = document.querySelector(".dots");
+ 
+  // Limpa qualquer dot duplicado antes de criar
+  dotsContainer.innerHTML = "";
+ 
+  // Cria os dots dinamicamente de acordo com os slides
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === 0) dot.classList.add("active");
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+  });
+ 
+  const dots = Array.from(dotsContainer.children);
+  let current = 0;
+ 
+  function showSlide(index) {
+    current = index;
+    track.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
+ 
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      showSlide(Number(dot.dataset.index));
+    });
+  });
+ 
+  // autoplay
+  setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 4000);
+});
+ 

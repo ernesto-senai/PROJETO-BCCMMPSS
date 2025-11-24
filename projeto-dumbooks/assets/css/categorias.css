@@ -1,0 +1,317 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf1;
+}
+/* fonte */
+    
+/* .tasa-explorer-<uniquifier> {
+
+  font-family: "TASA Explorer", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+/* --- NAVEGAÇÃO SUPERIOR --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 30px 30px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 20px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search {
+    flex: 1;
+    margin: 0 30px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
+}
+
+.cart img {
+    height: 70px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+/* --- CARROSSEL (Banner Principal) --- */
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 2200px;
+    margin: 0 auto 60px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: none;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 460px;
+    /* Altura do banner */
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    padding: 2px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #74747485;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+}   
+/* Título da seção (substitui .oi) */
+.section-title {
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d40;
+    background-color: #fffaf1;
+}
+
+/* Grid de Cards */
+.contentCards {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Reduzido o gap */
+    padding: 20px;
+}
+
+/* Estilo do Card (limpo e sem altura fixa) */
+.card {
+        /* font-family: 'Segoe UI'; */
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    /* height: 390px; <- REMOVIDO: Deixe o conteúdo definir a altura */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px #bcc0b7;
+    background-color: #ffffff; /* Adicionado fundo branco */
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito suave ao passar o mouse */
+}
+
+.card-image {
+   width: 100%; /* Faz a imagem ocupar o card */
+   max-height: 270px;
+   object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.card-info {
+    padding: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #004d40;
+    font-size: 14px;
+    flex-grow: 1; /* Faz esta div crescer para preencher o espaço */
+}
+
+.card-info h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.card-author {
+    font-size: 12px; /* Aumentado de 9px */
+    color: #555;
+    margin: 0;
+}
+
+/* Estilo do Botão "Veja Mais" */
+.vermais {
+    display: block; /* Ocupa a largura toda */
+    background-color: #00796b;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-top: auto; /* Empurra o botão para o final do card */
+    transition: background-color 0.2s;
+}
+
+.vermais:hover {
+    background-color: #004d40;
+}
+
+/* Seção de Editoras */
+.editoras {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+
+}
+
+.logos-editoras {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Reduzido o gap */
+    flex-wrap: wrap;
+    margin-top: 30px; /* Removido do .titulo-editoras */
+}
+
+.logo-item {
+    width: 120px; /* Reduzido */
+    height: 120px; /* Reduzido */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* --- CÓDIGO REMOVIDO --- */
+/* .card (primeira definição) -> Removido por duplicidade.
+.content-meio, .meio -> Removido por não ser usado.
+.book-grid, .book-card -> Removido por não ser usado.
+.titulo-editoras -> Removido e substituído por .section-title.
+*/
+
+
+/* --- ESTILOS DO FOOTER --- */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 40px 20px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.footer-about, .footer-links {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-about h3, .footer-links h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #00796b;
+    padding-bottom: 5px;
+}
+
+.footer-about p {
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: text-decoration 0.2s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #00796b;
+    font-size: 0.9em;
+}
