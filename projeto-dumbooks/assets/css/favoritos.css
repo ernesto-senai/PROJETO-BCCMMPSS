@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf0;
+}
+
+/* --- ESTILOS DO HEADER (Inalterado) --- */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 30px 30px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 90px;
+    margin-right: 20px;
+    margin: 31px;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+.search {
+    flex-grow: 1; /* Permite que ele cresça no espaço central */
+    max-width: 450px; /* Mantém a largura de 450px que você pediu */
+    margin-right: 50000px;
+    /* Centraliza a busca entre o logo e o carrinho */
+    margin: 0 30px; 
+    
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9); 
+    
+
+}
+.cart img {
+    height: 70px;
+    margin: 20px;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    background-color: #00796b;
+    padding: 12px 0;
+}
+
+.categories a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- 4. ÁREA PRINCIPAL (MAIN) --- */
+.content-area {
+    padding: 30px 5%;
+}
+
+/* Títulos */
+.subtitle {
+    font-size: 1.8em;
+    color: #333; /* Cor mais escura para melhor leitura */
+    margin-bottom: 20px;
+    border-left: 5px solid #20b0a9;
+    padding-left: 10px;
+}
+
+/* --- 5. SEÇÃO MAIS RELEVANTES (featured-grid) --- */
+.relevant-section {
+    margin-bottom: 40px;
+}
+
+.featured-grid {
+    display: grid;
+    /* Define o layout de 3 colunas iguais */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+.featured-card {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de Fundo */
+.july-releases {
+    background-color: #8d2f18; /* Vermelho/Coral */
+}
+
+.summer-books {
+   background-color: #8d2f18; /* Vermelho/Coral */
+}
+
+.july-picks {
+    background-color: #20b2aa; /* Verde-água */
+}
+
+/* GIF de Fundo */
+.featured-card .gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5; /* Reduz a opacidade para o texto se destacar */
+    transition: opacity 0.3s;
+}
+
+.featured-card:hover .gif {
+    opacity: 0.8;
+}
+
+/* Textos sobre o Fundo */
+.featured-card .main-text,
+.featured-card .header-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra forte para legibilidade */
+}
+
+.featured-card .header-text {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.featured-card .main-text {
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+/* --- 6. SEÇÃO QUERO LER (want-to-read-section) --- */
+.want-to-read-section .subtitle {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+}
+
+.action-text {
+    font-size: 0.65em;
+    color: #777;
+    font-weight: normal;
+}
+
+/* Contêiner de Scroll Horizontal */
+.horizontal-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    gap: 30px;
+    /* Removido white-space: nowrap; para evitar problemas de layout desnecessários */
+}
+
+/* Estilos da Capa do Livro */
+.book-cover-card {
+    flex: 0 0 auto;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 30px; /* Espaço para a barra de progresso */
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.book-cover:hover {
+    transform: scale(1.03); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Barra de Progresso - Estrutura e Preenchimento */
+.progress-bar {
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden; /* Garante que o preenchimento não ultrapasse os limites */
+}
+
+/* O elemento `::after` é usado para o preenchimento da barra */
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    /* Cor de destaque */
+    background-color: #064132; 
+    border-radius: 5px;
+    /* A largura é controlada pelo 'style' inline no HTML (ex: style="width: 25%;") */
+    /* Não defina width aqui, pois o HTML já faz isso para cada livro! */
+}
+
+.progress-percent {
+    position: absolute;
+    bottom: -20px; /* Posiciona abaixo da barra */
+    right: 0;
+    font-size: 0.8em;
+    color: #044630;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Badge NOVO (new-release) */
+.badge {
+    position: absolute;
+    top: 0px; 
+    right: 0px;
+    background-color: #ff4800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 3;
+    transform: rotate(5deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- 7. Estilos de Scrollbar (Apenas WebKit) --- */
+.horizontal-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+    background-color: #b0c4de; /* Cor suave para a barra de rolagem */
+    border-radius: 4px;
+}
+
+.horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+    background-color: #99a9bc;
+}
