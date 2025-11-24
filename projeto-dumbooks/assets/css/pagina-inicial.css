@@ -238,7 +238,7 @@ body {
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 
 .logo-item img {
