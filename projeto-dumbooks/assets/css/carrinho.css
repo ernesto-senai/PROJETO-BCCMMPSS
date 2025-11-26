@@ -44,7 +44,7 @@ body {
 
 .perfil-botao img{
   height: 60px;
-  padding-left: 400px ;
+  padding-left: 400px;
   padding-top: 10px;
 }
 
@@ -220,7 +220,6 @@ body {
 
 .botoes {
   margin-top: 20px;
-  display: flex;
   flex-direction: column; /* Botões um abaixo do outro */
   gap: 10px;
 }
@@ -251,5 +250,5 @@ button {
   text-align: center;
   text-decoration: none;
   
-  
 }
+
