@@ -630,7 +630,7 @@ footer {
 
     display: inline-block;
 
-}
+}  
 
 
 
@@ -673,3 +673,7 @@ footer {
     }
 
 } 
+
+.imagem{
+    height: 150;
+}
