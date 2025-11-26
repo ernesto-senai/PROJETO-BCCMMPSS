@@ -38,6 +38,7 @@ body {
 }
 
 .search {
+<<<<<<< HEAD
     flex: 1;
     margin: 0 30px;
     padding: 10px 12px;
@@ -48,6 +49,24 @@ body {
 
 .cart img {
     height: 70px;
+=======
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+}
+
+.cart img {
+  height: 60px;
+}
+
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
+>>>>>>> 0dff1b0b3ce8631d5cb7660c3ce9bad7e7aee1a6
 }
 
 .categories {
