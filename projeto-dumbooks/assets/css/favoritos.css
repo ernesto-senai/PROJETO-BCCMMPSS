@@ -32,23 +32,22 @@ body {
 
 
 .search {
-    flex-grow: 1; /* Permite que ele cresça no espaço central */
-    max-width: 450px; /* Mantém a largura de 450px que você pediu */
-    margin-right: 50000px;
-    /* Centraliza a busca entre o logo e o carrinho */
-    margin: 0 30px; 
-    
-    padding: 8px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1em;
-    background-color: rgba(255, 255, 255, 0.9); 
-    
-
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
 }
+
 .cart img {
-    height: 70px;
-    margin: 20px;
+  height: 60px;
+}
+
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
 }
 
 .categories {

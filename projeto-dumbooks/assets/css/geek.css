@@ -38,16 +38,22 @@ body {
 }
 
 .search {
-    flex: 1;
-    margin: 0 30px;
-    padding: 10px 12px;
-    border-radius: 20px;
-    border: none;
-    font-size: 1em;
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
 }
 
 .cart img {
-    height: 70px;
+  height: 60px;
+}
+
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
 }
 
 .categories {
@@ -261,57 +267,419 @@ body {
 
 
 /* --- ESTILOS DO FOOTER --- */
-footer {
-    background-color: #004d40;
-    color: white;
-    padding: 40px 20px;
-    text-align: left;
-    margin-top: 50px;
+/* --- FOOTER --- */
+/* Estilos gerais do footer já estão bons */
+
+.footer-bottom {
+    /* ... estilos existentes ... */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    /* Linha divisória mais sutil */
 }
+
+/* Ícones Sociais (Ajuste para cor de fundo harmoniosa) */
+.social-icons .icon-btn {
+    font-family: FontAwesome, sans-serif;
+    background-color: #00796b;
+    /* Usando a cor de destaque (categorias) */
+    color: white;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-left: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.social-icons .icon-btn:hover {
+    background-color: #004d40;
+}
+
+
+
+
+
+/* --- EDITORAS --- */
+.Universos Literários {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title{
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+.logos-Literários {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+.logo-Universos {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-Universos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+@media (max-width: 768px) {
+    .footer-content {
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .footer-column {
+        flex-basis: 40%;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .payment-info,
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustes para telas menores */
+    .slide img {
+        height: 250px;
+        /* Reduz a altura do banner em telas pequenas */
+    }
+
+    .top-nav {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .search {
+        order: 1;
+        /* Coloca a busca entre o logo e o carrinho se for necessário */
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .cart {
+        align-self: flex-end;
+        /* Move o carrinho para a direita */
+    }
+
+    .categories {
+        overflow-x: auto;
+        /* Permite rolagem horizontal para categorias */
+        justify-content: flex-start;
+        padding: 10px 15px;
+    }
+
+    .categories a {
+        flex-shrink: 0;
+        /* Impede que os links de categoria encolham */
+    }
+
+    .card {
+        width: 100px;
+        /* Cards menores em telas pequenas */
+        max-width: 130px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+}
+
+
+/* --- FOOTER --- */
+
+footer {
+
+    background-color: #004d40;
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+
+
+footer a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+
+/* --- ESTILOS GERAIS DO FOOTER --- */
+
+footer {
+
+    background: linear-gradient(to right, #004d40, #010f0e); /* Fundo azul escuro */
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    padding: 40px 5%; /* Espaçamento interno */
+
+    border-top: 2px solid #233463; /* Linha de divisão sutil no topo */
+
+}
+
+
+
+/* Container que alinha as colunas no centro */
 
 .footer-content {
+
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
+
+    justify-content: space-between;
+
     max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+
+    margin: 0 auto 50px auto; /* Espaço antes da seção inferior */
+
+    gap: 20px;
+
+    flex-wrap: wrap; /* Para garantir que funcione em telas menores */
+
 }
 
-.footer-about, .footer-links {
-    flex: 1;
-    min-width: 300px;
+
+
+.footer-column {
+
+    flex-basis: 18%; /* Garante que 5 colunas caibam na linha (5 * 18% = 90%) */
+
+    min-width: 150px; /* Garante que não fiquem muito estreitas */
+
 }
 
-.footer-about h3, .footer-links h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #00796b;
-    padding-bottom: 5px;
+
+
+.footer-column h4 {
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+    color: #eeeeee;
+
 }
 
-.footer-about p {
-    line-height: 1.6;
-    color: #f0f0f0;
+
+
+.footer-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
 }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    display: block;
+
+
+.footer-column li {
+
     margin-bottom: 10px;
-    transition: text-decoration 0.2s;
+
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+
+
+.footer-column a {
+
+    color: #c4c4c4; /* Cor do link cinza claro */
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s;
+
 }
 
-.footer-copy {
+
+
+.footer-column a:hover {
+
+    color: #ffffff;
+
+}
+
+
+
+
+
+/* --- SEÇÃO INFERIOR (PAGAMENTO E SOCIAL) --- */
+
+.footer-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-top: 1px solid #feffff;
+
+    padding-top: 25px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.payment-info, .social-media {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px; /* Para telas pequenas */
+
+}
+
+
+
+.payment-info p, .social-media p {
+
+    font-size: 0.9rem;
+
+    color: #c4c4c4;
+
+    margin: 0;
+
+}
+
+
+
+/* Ícones de Cartão */
+
+.card-icons img {
+
+    height: 25px; /* Altura das bandeiras de cartão */
+
+    margin-right: 5px;
+
+}
+
+
+
+/* Ícones Sociais (Ajuste se estiver usando ícones Font Awesome) */
+
+.social-icons .icon-btn {
+
+    font-family: FontAwesome, sans-serif; /* Use o nome da sua fonte de ícones */
+
+    background-color: #0a4621; /* Fundo do botão */
+
+    color: white;
+
+    width: 30px;
+
+    height: 30px;
+
+    line-height: 30px;
+
     text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #00796b;
-    font-size: 0.9em;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    display: inline-block;
+
+}  
+
+
+
+/* Estilos para telas menores (Responsividade) */
+
+@media (max-width: 768px) {
+
+    .footer-content {
+
+        justify-content: space-around;
+
+        gap: 40px;
+
+    }
+
+    .footer-column {
+
+        flex-basis: 40%; /* 2 colunas por linha */
+
+    }
+
+    .footer-bottom {
+
+        justify-content: center;
+
+        text-align: center;
+
+        flex-direction: column;
+
+    }
+
+    .payment-info, .social-media {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-bottom: 20px;
+
+    }
+
+} 
+
+.imagem{
+    height: 150;
 }
