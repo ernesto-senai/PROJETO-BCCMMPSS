@@ -31,7 +31,24 @@ body {
 .site-name { font-size: 1.5em; font-weight: bold; }
 
 .search-box { flex: 1; display: flex; justify-content: center; }
-.search { width: 100%; max-width: 500px; padding: 10px 15px; border-radius: 20px; border: none; }
+.search {
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+}
+
+.cart img {
+  height: 60px;
+}
+
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
+}
 
 .user-actions { display: flex; gap: 20px; align-items: center; }
 .user-actions img { height: 40px; }

@@ -47,18 +47,22 @@ body {
 }
 
 .search {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    border: none;
-    font-size: 1em;
-    outline: none;
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
 }
 
 .cart img {
-    height: 40px; /* Ajustado para não ficar gigante */
-    cursor: pointer;
+  height: 60px;
+}
+
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
 }
 
 .categories {
