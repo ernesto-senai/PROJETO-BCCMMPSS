@@ -1,118 +1,83 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #fff;
-  color: #333;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf1;
 }
 
-/* Cabeçalho principal */
-header {
-  background-color: #004d40; /* verde escuro */
-  padding: 10px 20px;
-}
-
-/* Navegação superior */
+/* --- NAVEGAÇÃO SUPERIOR --- */
 .top-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 20px 30px;
+    color: white;
 }
 
-/* Logo e nome do site */
+
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  height: 40px;
-  margin-right: 10px;
+    height: 80px;
+    margin-right: 20px;
 }
 
 .site-name {
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* Barra de pesquisa */
-.search-form {
-  position: relative;
-  width: 400px;
+.search {
+flex: 1;
+    margin: 0 30px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
 }
 
-.search-form input {
-  width: 300px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 20px;
-  background-color: #ffffff;
-  font-size: 1em;
-}
-
-
-/* Sugestões de pesquisa */
-.sugestoes {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: #ffffff;
-  border: 1px solid #ccc;
-  border-top: none;
-  z-index: 1000;
-  display: none;
-  border-radius: 0 0 8px 8px;
-  overflow: hidden;
-}
-
-.sugestao-item {
-  padding: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.sugestao-item:hover {
-  background-color: #f0f0f0;
-}
-
-/* Ícones de perfil e sacola */
-.perfil-botao img,
 .cart img {
-  height: 30px;
-  cursor: pointer;
-  margin-left: 15px;
+    height: 70px;
+    width: 50%;
+    margin: 0 30px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
 }
 
-/* Menu de categorias */
+.cart img {
+    height: 60px;
+}
+
+.perfil-botao img {
+    height: 60px;
+    padding-left: 400px;
+    padding-top: 10px;
+   
+}
+
 .categories {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-  background-color: #00695c;
+    display: flex;
+    justify-content: center;
+    background-color: #00796b;
+    padding: 12px 0;
 }
 
 .categories a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: background 0.3s;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .categories a:hover {
-  background-color: #004d40;
+    text-decoration: underline;
 }
-
 
 /* --- CARROSSEL (Banner Principal) --- */
 .carousel {
@@ -500,9 +465,8 @@ footer {
 }
 
 .fotos{
-    height: 30px;
-    width: 30px;
-    margin: px;
+    height: 20px;
+    width: 20px;
 }
 
 
