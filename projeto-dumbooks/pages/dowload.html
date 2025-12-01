@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento | Dumbooks</title>
+    <link rel="stylesheet" href="../assets/css/pagamento.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
+                <span class="site-name">Dumbooks</span>
+            </div>
+
+            <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
+
+            <div class="perfil-botao">
+                <img src="../assets/img/botao-perfil.png" alt="Perfil">
+            </div>
+
+            <div class="cart">
+                <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+            </div>
+        </nav>
+
+        <div class="categories">
+            <a href="#">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="#">Livros</a>
+            <a href="#">Jovens</a>
+            <a href="infantil.html">infantil</a>
+            <a href="geek.html">Geek</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="resumo-pedido">
+            <h2>Resumo do pedido</h2>
+            <div class="produto">
+                <img src="../assets/img/livro.webp" alt="Saga The Witcher">
+                <div class="detalhes-produto">
+                    <h3>Saga The Witcher</h3>
+                    <p class="preco">R$ 589,99</p>
+                    <div class="endereco-box">
+                        <strong>Endereço de entrega:</strong>
+                        <p>R. Direita, 955 – Vila Santo Antônio, Cotia - SP</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-box">
+                <p>Total: <span>R$ 589,99</span></p>
+            </div>
+
+            <div class="botoes-acao">
+                <button class="btn-cancelar" onclick="window.history.back()">Cancelar</button>
+                <!-- <button class="btn-finalizar" id="btnFinalizar">Dowload</button> -->
+                <button class="btn-finalizar" id="btnFinalizar" onclick="baixarArquivo()">Baixar Arquivo</button>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <script>
+
+
+
+
+
+
+        function baixarArquivo() {
+            const link = document.createElement("a");
+            link.href = "Batman.pdf"; // caminho do arquivo
+            link.download = "Batman.pdf"; // nome sugerido para salvar
+            link.click();
+        }
+
+
+
+    </script>
+</body>
+
+</html>
