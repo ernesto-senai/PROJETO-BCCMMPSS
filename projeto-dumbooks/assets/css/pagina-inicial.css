@@ -3,6 +3,9 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #fffaf0;
 }
+a{
+    text-decoration: none;
+}
 
 /* --- NAVEGAÇÃO SUPERIOR --- */
 .top-nav {
