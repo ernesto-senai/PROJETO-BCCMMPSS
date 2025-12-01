@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/compras.css">
+  <title>Produto</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="top-nav">
+      <div class="logo">
+        <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
+        <span class="site-name">Dumbooks</span>
+      </div>
+      <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
+      
+      <div class="perfil-botao">
+        <img src="../assets/img/botao-perfil.png" alt="Perfil">
+      </div>  
+
+      <div class="cart">
+        <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+      </div>
+    </nav>
+
+        <div class="categories">
+            <a href="#">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="#">Livros</a>
+            <a href="#">Jovens</a>
+            <a href="infantil.html">infantil</a>
+            <a href="geek.html">Geek</a>
+        </div>
+  </header>
+
+  <main class="container-produto">
+
+    <section class="galeria-produto">
+      <img src="../assets/img/CAPTAO-AMERICA.png" alt="Captao America">
+    </section>
+
+    <section class="info-produto">
+      <h2>Verity</h2>
+      <p class="autor">Por: <strong>Marvel</strong></p>
+      
+      <p class="classificacao">Recomendado para <strong>maiores de 12 anos</strong></p>
+      <div class="avaliacao">Avaliação: ★★★★☆</div>
+
+      <p class="descricao">
+O Capitão América é apresentado como Steve Rogers, um jovem frágil que, durante a Segunda Guerra Mundial, se voluntaria para servir seu país. Rejeitado por sua condição física, ele é escolhido para participar de um experimento secreto e recebe o Soro do Super-Soldado, que transforma seu corpo e lhe dá habilidades sobre-humanas. Com um escudo indestrutível e um espírito inabalável, ele se torna o Capitão América, símbolo da liberdade e da justiça. Em suas histórias, enfrenta vilões que ameaçam a paz mundial, lidera aliados em batalhas decisivas e encara dilemas morais sobre dever e sacrifício. No clímax, sua coragem e valores são testados em confrontos que vão além da força física, mostrando que sua verdadeira arma é a esperança que inspira nos outros. Ao final, o Capitão América triunfa não apenas pela vitória em combate, mas por reafirmar que lutar pelo que é certo é o que realmente define um herói.
+      </p>
+
+      <p class="preco">R$ 49,90</p>
+
+      <div class="quantity-selector">
+        <button onclick="decrease()">−</button>
+        <input type="text" id="quantity" value="1" readonly>
+        <button onclick="increase()">+</button>
+      </div>
+
+      <div class="botoes-acao">
+        <button class="button-37" role="button">Comprar agora</button>
+        <button class="button-38" role="button">Adicionar ao carrinho</button>
+      </div>
+    </section>
+
+    <aside class="secao-comentarios">
+      <h3>Deixe seu comentário</h3>
+      <textarea id="comentario" placeholder="Escreva sua opinião sobre o livro..."></textarea>
+      <button class="button-37" role="button">Enviar Comentário</button>
+    </aside>
+
+  </main>
+
+  <script>
+  function increase() {
+    var value = parseInt(document.getElementById('quantity').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    document.getElementById('quantity').value = value;
+  }
+
+  function decrease() {
+    var value = parseInt(document.getElementById('quantity').value, 10);
+    value = isNaN(value) ? 0 : value;
+    value < 1 ? value = 1 : ''; // Impede números negativos ou zero
+    value--;
+    // Garante que o mínimo seja 1
+    if(value < 1) value = 1; 
+    document.getElementById('quantity').value = value;
+  }
+</script>
+
+  </body>
+</html>
