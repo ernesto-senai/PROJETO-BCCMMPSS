@@ -14,7 +14,7 @@ body {
 
 /* Cabeçalho principal */
 header {
-    background-color: #004d40;
+    background: linear-gradient(to right, #004d40, #010f0e);
     /* verde escuro */
     padding: 10px 20px;
 }
@@ -59,7 +59,7 @@ header {
     background-color: #fff;
     font-size: 1em;
     outline: none;
-    margin: -590px;
+    margin: -570px;
 }
 
 /* Sugestões de pesquisa */
@@ -119,6 +119,8 @@ header {
     color: #ffeb3b;
     /* amarelo destaque */
 }
+
+
 
 /* --- CARROSSEL --- */
 .carousel {
@@ -321,6 +323,11 @@ footer {
     margin-bottom: 20px;
     color: #eeeeee;
 }
+ .fotos{
+    width: 30px;
+    height: 30px;
+
+ }
 
 .footer-column ul {
     list-style: none;
@@ -352,6 +359,10 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
+}
+.foto{
+    width: 20px;
+    height: 20px;
 }
 
 .payment-info,
