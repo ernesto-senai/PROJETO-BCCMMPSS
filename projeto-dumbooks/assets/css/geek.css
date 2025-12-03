@@ -1,123 +1,78 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fffaf0;
-    color: #333;
-    line-height: 1.5;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fffaf1;
 }
+/* fonte */
+    
+/* .tasa-explorer-<uniquifier> {
 
-/* Cabeçalho principal */
-header {
-    background: linear-gradient(to right, #004d40, #010f0e);
-    /* verde escuro */
-    padding: 10px 20px;
-}
-
-/* Navegação superior */
+  font-family: "TASA Explorer", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+/* --- NAVEGAÇÃO SUPERIOR --- */
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    background: linear-gradient(to right, #004d40, #010f0e);
+    padding: 30px 30px;
+    color: white;
 }
 
-/* Logo e nome do site */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 80px;
+    margin-right: 20px;
 }
 
 .site-name {
-    font-size: 1.6em;
+    font-size: 1.5em;
     font-weight: bold;
-    color: #fff;
 }
 
-/* Barra de pesquisa */
-.search-form {
-    position: relative;
-    max-width: 400px;
-    flex: 1;
+.search {
+  width: 50%;
+  margin: 0 30px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
 }
 
-.search-form input {
-    width: 100%;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 20px;
-    background-color: #fff;
-    font-size: 1em;
-    outline: none;
-    margin: -570px;
+.cart img {
+  height: 60px;
 }
 
-/* Sugestões de pesquisa */
-.sugestoes {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    z-index: 1000;
-    display: none;
-    border-radius: 0 0 8px 8px;
-    overflow: hidden;
+.perfil-botao img{
+  height: 60px;
+  padding-left: 400px ;
+  padding-top: 10px;
 }
 
-.sugestao-item {
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-}
-
-.sugestao-item:hover {
-    background-color: #f0f0f0;
-}
-
-/* Perfil + Sacola juntos */
-.user-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.user-actions img {
-    height: 40px;
-    cursor: pointer;
-}
-
-/* Menu de categorias */
 .categories {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    background-color: #00695c;
+    background-color: #00796b;
+    padding: 12px 0;
 }
 
 .categories a {
-    color: #fff;
+    color: white;
+    margin: 0 20px;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 1em;
 }
 
 .categories a:hover {
-    color: #ffeb3b;
-    /* amarelo destaque */
+    text-decoration: underline;
 }
 
 /* --- CARROSSEL (Banner Principal) --- */
@@ -144,7 +99,7 @@ header {
 
 .slide img {
     width: 100%;
-    height: 306px;
+    height: 460px;
     /* Altura do banner */
     object-fit: cover;
     display: block;
@@ -183,29 +138,21 @@ header {
 
 .dot.active {
     background-color: #fff;
-}
-
-/* --- TÍTULOS E SEÇÕES --- */
-
-/* Corrigindo e centralizando o título da seção de livros */
+}   
+/* Título da seção (substitui .oi) */
 .section-title {
-    font-size: 1.7em;
-    /* Tamanho ajustado para um título de seção principal */
-    margin: 30px 0 20px 105px;
-    text-align: left;
-    color: #6b6868;
-    
-}
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #004d40;
 
-/* Ocultando ou corrigindo títulos não utilizados/confusos */
-.titulo,
-.oi {
-    display: none;
-    /* Mantendo os originais ocultos ou removíveis, se não forem usados */
 }
 
 /* Grid de Cards */
 .contentCards {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -215,6 +162,7 @@ header {
 
 /* Estilo do Card (limpo e sem altura fixa) */
 .card {
+        /* font-family: 'Segoe UI'; */
     display: flex;
     flex-direction: column;
     width: 200px;
@@ -288,16 +236,15 @@ header {
     gap: 40px; /* Reduzido o gap */
     flex-wrap: wrap;
     margin-top: 30px; /* Removido do .titulo-editoras */
-
 }
 
 .logo-item {
-    width: 135px; /* Reduzido */
-    height: 130px; /* Reduzido */
+    width: 120px; /* Reduzido */
+    height: 120px; /* Reduzido */
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.1s ease;
+    transition: transform 0.3s ease;
 }
 
 .logo-item img {
@@ -318,27 +265,8 @@ header {
 .titulo-editoras -> Removido e substituído por .section-title.
 */
 
-.content-meio {
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    flex-wrap: wrap;
-}
 
-.card-meio {
-    width: 30%;
-    max-width: 350px;
-}
-
-.meio {
-    margin: auto;
-    background: #000;
-    width: 100%;
-    height: 500px;
-    padding: 0px;
-    border-radius: 1rem;
-}
+/* --- ESTILOS DO FOOTER --- */
 /* --- FOOTER --- */
 /* Estilos gerais do footer já estão bons */
 
@@ -708,7 +636,7 @@ footer {
 
     display: inline-block;
 
-}
+}  
 
 
 
@@ -751,3 +679,7 @@ footer {
     }
 
 } 
+
+.imagem{
+    height: 150;
+}

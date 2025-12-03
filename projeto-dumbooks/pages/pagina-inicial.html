@@ -3,38 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dumbooks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovens</title>
     <link rel="stylesheet" href="../assets/css/pagina-inicial.css">
 </head>
-
 
 <body>
     <header>
         <nav class="top-nav">
             <div class="logo">
-                <img src="../assets/img/logo.png" alt="Logo Dumbooks">
+                <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
                 <span class="site-name">Dumbooks</span>
             </div>
-            <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
 
-            <div class="perfil-botao">
-                <a href="perfil.html"><img src="../assets/img/botao-perfil.png" alt="Perfil"></a>
-            </div>
+            <form class="search-form" id="formPesquisa">
+                <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
+                <div id="sugestoesPesquisa" class="sugestoes"></div>
+            </form>
 
-            <a href="carrinho.html">
+            <!-- Perfil + Sacola juntos -->
+            <div class="user-actions">
+                <div class="perfil-botao">
+                    <img src="../assets/img/botao-perfil.png" alt="Perfil">
+                </div>
                 <div class="cart">
                     <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
                 </div>
-            </a>
+            </div>
         </nav>
 
-
-                    <div class="categories">
-                        <a href="internacional.html">Internacional</a>
-                        <a href="HQ.html">HQ</a>
-                        <a href="#">Jovens</a>
-                        <a href="infantil.html">infantil</a>
-                    </div>
+        <div class="categories">
+            <a href="Internacional.html">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="jovens1.html">Jovens</a>
+            <a href="infantil.html">Infantil</a>
+           
+        </div>
     </header>
 
     <section class="carousel" data-animate data-delay="0.4s">
@@ -42,7 +46,7 @@
         <div class="carousel-track">
             <div class="slide">
                 <a href="#">
-                    <img src="../assets/img/hobbit.png" alt="desconto">
+                    <img src="../assets/img/bn1.png" alt="desconto">
                 </a>
 
 
@@ -50,21 +54,21 @@
 
             <div class="slide">
                 <a href="#">
-                    <img src="../assets/img/peterpan.png" alt="Cadeira Luna">
+                    <img src="../assets/img/bn2.png" alt="Cadeira Luna">
                 </a>
 
             </div>
 
             <div class="slide">
                 <a href="#">
-                    <img src="../assets/img/natal.png" alt="Mesa Aurora">
+                    <img src="../assets/img/bn3.png" alt="Mesa Aurora">
                 </a>
 
             </div>
 
             <div class="slide">
                 <a href="#">
-                    <img src="../assets/img/promo.png" alt="Mesa Aurora">
+                    <img src="../assets/img/bn4.png " alt="Mesa Aurora">
                 </a>
 
             </div>

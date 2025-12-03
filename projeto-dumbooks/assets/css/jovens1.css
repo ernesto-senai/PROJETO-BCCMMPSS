@@ -1,95 +1,136 @@
-body {
+/* Reset básico */
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fffaf1;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- NAVEGAÇÃO SUPERIOR --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Cabeçalho principal */
+header {
+    background: linear-gradient(to right, #004d40, #010f0e);
+    /* verde escuro */
+    padding: 10px 20px;
+}
+
+/* Navegação superior */
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #004d40, #010f0e);
-    padding: 20px 30px;
-    color: white;
+    flex-wrap: wrap;
 }
 
-
+/* Logo e nome do site */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 80px;
-    margin-right: 20px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .site-name {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
+    color: #fff;
 }
 
-.search {
-flex: 1;
-    margin: 0 30px;
-    padding: 10px 12px;
-    border-radius: 20px;
+/* Barra de pesquisa */
+.search-form {
+    position: relative;
+    max-width: 400px;
+    flex: 1;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 8px 12px;
     border: none;
-    font-size: 1em;
-}
-
-.cart img {
-    height: 70px;
-    width: 50%;
-    margin: 0 30px;
-    padding: 10px 12px;
     border-radius: 20px;
-    border: none;
+    background-color: #fff;
     font-size: 1em;
+    outline: none;
+    margin: -570px;
 }
 
-.cart img {
-    height: 60px;
+/* Sugestões de pesquisa */
+.sugestoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
 }
 
-.perfil-botao img {
-    height: 60px;
-    padding-left: 400px;
-    padding-top: 10px;
-   
+.sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
+.sugestao-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Perfil + Sacola juntos */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-actions img {
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Menu de categorias */
 .categories {
     display: flex;
     justify-content: center;
-    background-color: #00796b;
-    padding: 12px 0;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #00695c;
 }
 
 .categories a {
-    color: white;
-    margin: 0 20px;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 .categories a:hover {
-    text-decoration: underline;
+    color: #ffeb3b;
+    /* amarelo destaque */
 }
 
-/* --- CARROSSEL (Banner Principal) --- */
+
+
+/* --- CARROSSEL --- */
 .carousel {
     position: relative;
-    width: 99%;
+    width: 100%;
     max-width: 2200px;
     margin: 0 auto 60px auto;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background: none;
-    gap: 12px;
 }
 
 .carousel-track {
@@ -103,9 +144,8 @@ flex: 1;
 }
 
 .slide img {
-    width: 99%;
+    width: 100%;
     height: 260px;
-    /* Altura do banner */
     object-fit: cover;
     display: block;
     border-radius: 20px;
@@ -146,55 +186,43 @@ flex: 1;
     background-color: #fff;
 }
 
-/* Título da seção (substitui .oi) */
+/* Título da seção */
 .section-title {
-    margin-left: 60px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin: 40px 0 20px 60px;
     font-size: 1.5em;
     font-weight: bold;
     color: #004d40;
-    background-color: #fffaf1;
 }
 
 /* Grid de Cards */
 .contentCards {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
-    /* Reduzido o gap */
     padding: 20px;
 }
 
-/* Estilo do Card (limpo e sem altura fixa) */
 .card {
-    /* font-family: 'Segoe UI'; */
     display: flex;
     flex-direction: column;
     width: 200px;
-    /* height: 390px; <- REMOVIDO: Deixe o conteúdo definir a altura */
     margin-bottom: 30px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 5px #bcc0b7;
-    background-color: #ffffff;
-    /* Adicionado fundo branco */
+    background-color: #fff;
     transition: transform 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    /* Efeito suave ao passar o mouse */
 }
 
 .card-image {
     width: 100%;
-    /* Faz a imagem ocupar o card */
     max-height: 270px;
     object-fit: cover;
-    /* Garante que a imagem cubra o espaço */
 }
 
 .card-info {
@@ -203,25 +231,20 @@ flex: 1;
     color: #004d40;
     font-size: 14px;
     flex-grow: 1;
-    /* Faz esta div crescer para preencher o espaço */
 }
 
 .card-info h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin: 0 0 5px;
 }
 
 .card-author {
     font-size: 12px;
-    /* Aumentado de 9px */
     color: #555;
     margin: 0;
 }
 
-/* Estilo do Botão "Veja Mais" */
 .vermais {
     display: block;
-    /* Ocupa a largura toda */
     background-color: #00796b;
     color: white;
     padding: 12px 15px;
@@ -230,7 +253,6 @@ flex: 1;
     font-weight: bold;
     font-size: 0.9em;
     margin-top: auto;
-    /* Empurra o botão para o final do card */
     transition: background-color 0.2s;
 }
 
@@ -238,29 +260,24 @@ flex: 1;
     background-color: #004d40;
 }
 
-/* Seção de Editoras */
+/* Editoras */
 .editoras {
     text-align: center;
     margin: 40px 0;
     padding: 20px;
-
 }
 
 .logos-editoras {
     display: flex;
     justify-content: center;
     gap: 40px;
-    /* Reduzido o gap */
     flex-wrap: wrap;
     margin-top: 30px;
-    /* Removido do .titulo-editoras */
 }
 
 .logo-item {
     width: 120px;
-    /* Reduzido */
     height: 120px;
-    /* Reduzido */
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
@@ -277,277 +294,88 @@ flex: 1;
     transform: scale(1.05);
 }
 
-
-/* --- CÓDIGO REMOVIDO --- */
-/* .card (primeira definição) -> Removido por duplicidade.
-.content-meio, .meio -> Removido por não ser usado.
-.book-grid, .book-card -> Removido por não ser usado.
-.titulo-editoras -> Removido e substituído por .section-title.
-*/
-
-
+/* --- FOOTER --- */
 footer {
-
-    background-color: #004d40;
-
+    background: linear-gradient(to right, #004d40, #010f0e);
     color: white;
-
-    padding: 20px;
-
-    text-align: center;
-
-}
-
-
-
-footer a {
-
-    color: white;
-
-    text-decoration: none;
-
-}
-
-
-
-/* --- ESTILOS GERAIS DO FOOTER --- */
-
-footer {
-
-    background: linear-gradient(to right, #004d40, #010f0e); /* Fundo azul escuro */
-
-    color: white;
-
     font-family: Arial, sans-serif;
-
-    padding: 40px 5%; /* Espaçamento interno */
-
-    border-top: 2px solid #233463; /* Linha de divisão sutil no topo */
-
+    padding: 40px 5%;
+    border-top: 2px solid #233463;
 }
-
-
-
-/* Container que alinha as colunas no centro */
 
 .footer-content {
-
     display: flex;
-
     justify-content: space-between;
-
     max-width: 1200px;
-
-    margin: 0 auto 50px auto; /* Espaço antes da seção inferior */
-
+    margin: 0 auto 50px auto;
     gap: 20px;
-
-    flex-wrap: wrap; /* Para garantir que funcione em telas menores */
-
+    flex-wrap: wrap;
 }
-
-
 
 .footer-column {
-
-    flex-basis: 18%; /* Garante que 5 colunas caibam na linha (5 * 18% = 90%) */
-
-    min-width: 150px; /* Garante que não fiquem muito estreitas */
-
+    flex-basis: 18%;
+    min-width: 150px;
 }
-
-
 
 .footer-column h4 {
-
     font-size: 1.1rem;
-
     font-weight: bold;
-
     margin-bottom: 20px;
-
     color: #eeeeee;
-
 }
-
-
-
-.footer-column ul {
-
-    list-style: none;
-
-    padding: 0;
-
-    margin: 0;
-
-}
-
-
-
-.footer-column li {
-
-    margin-bottom: 10px;
-
-}
-
-
-
-.footer-column a {
-
-    color: #c4c4c4; /* Cor do link cinza claro */
-
-    text-decoration: none;
-
-    font-size: 0.9rem;
-
-    transition: color 0.3s;
-
-}
-
-
-
-.footer-column a:hover {
-
-    color: #ffffff;
-
-}
-
-
-
-
-
-/* --- SEÇÃO INFERIOR (PAGAMENTO E SOCIAL) --- */
-
-.footer-bottom {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    border-top: 1px solid #feffff;
-
-    padding-top: 25px;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    flex-wrap: wrap;
-
-}
-
-
-
-.payment-info, .social-media {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 15px; /* Para telas pequenas */
-
-}
-
-
-
-.payment-info p, .social-media p {
-
-    font-size: 0.9rem;
-
-    color: #c4c4c4;
-
-    margin: 0;
-
-}
-
-.fotos{
-    height: 20px;
-    width: 20px;
-}
-
-
-/* Ícones de Cartão */
-
-.card-icons img {
-
-    height: 25px; /* Altura das bandeiras de cartão */
-
-    margin-right: 5px;
-
-}
-
-
-
-/* Ícones Sociais (Ajuste se estiver usando ícones Font Awesome) */
-
-.social-icons .icon-btn {
-
-    font-family: FontAwesome, sans-serif; /* Use o nome da sua fonte de ícones */
-
-    background-color: #0a4621; /* Fundo do botão */
-
-    color: white;
-
+ .fotos{
     width: 30px;
-
     height: 30px;
 
-    line-height: 30px;
+ }
 
-    text-align: center;
-
-    border-radius: 4px;
-
-    text-decoration: none;
-
-    margin-left: 5px;
-
-    display: inline-block;
-
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+.footer-column li {
+    margin-bottom: 10px;
+}
 
+.footer-column a {
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
 
-/* Estilos para telas menores (Responsividade) */
+.footer-column a:hover {
+    color: #fff;
+}
 
-@media (max-width: 768px) {
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #feffff;
+    padding-top: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.foto{
+    width: 20px;
+    height: 20px;
+}
 
-    .footer-content {
+.payment-info,
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
 
-        justify-content: space-around;
-
-        gap: 40px;
-
-    }
-
-    .footer-column {
-
-        flex-basis: 40%; /* 2 colunas por linha */
-
-    }
-
-    .footer-bottom {
-
-        justify-content: center;
-
-        text-align: center;
-
-        flex-direction: column;
-
-    }
-
-    .payment-info, .social-media {
-
-        flex-direction: column;
-
-        gap: 10px;
-
-        margin-bottom: 20px;
-
-    }
-
-} 
+.payment-info p,
+.social-media p {
+    font-size: 0.9rem;
+    color: #c4c4c4;
+    margin: 0;
+}
