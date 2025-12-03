@@ -34,7 +34,7 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     margin-right: 10px;
 }
 
@@ -59,7 +59,7 @@ header {
     background-color: #fff;
     font-size: 1em;
     outline: none;
-    margin: -570px;
+    margin: -428px;
 }
 
 /* Sugestões de pesquisa */
@@ -118,6 +118,11 @@ header {
 .categories a:hover {
     color: #ffeb3b;
     /* amarelo destaque */
+}
+
+/* --- 4. ÁREA PRINCIPAL (MAIN) --- */
+.content-area {
+    padding: 30px 5%;
 }
 
 
