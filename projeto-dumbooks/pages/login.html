@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <icon rel="icon" type="image/png" href="favicon.png"> -->
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <title>Synesth</title>
+</head>
+<body>
+        <div class="container">
+            <div class="formulario">
+                
+                <form action="/signin" method="post">
+                    <h1>Sign In</h1>
+                    <section class="username-group">
+                        <label for="username">Username:</label>
+                        <input class="igual" type="text" id="username" name="username" required>
+                    </section>
+                    <!-- SUBSTITUIR BR -->
+                    <br>
+                    <section class="username-group-password">  
+                        <label for="password">Password:</label>
+                        <input class="igual" type="password" id="password" name="password" required>
+                    </section>
+                    <br>
+                    <div class="betwen">
+                        <div>
+                            <input type="checkbox" name="checkbox" id="checkbox">
+                            <label for="checkbox">Lembre de mim</label>
+                        </div>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                    <!-- oq é um type="submit"?? -->
+                    
+                    <div class="social-button space-around">
+                        <a href="">
+                            <img src="../img/google.png" alt="Google logo">
+                        </a>
+                        
+                        <a href="">
+                            <img src="../img/facebook.png" alt="Google logo">
+                        </a>
+                        
+                        <a href="">
+                            <img src="../img/apple.png" alt="Google logo">
+                        </a>
+                    </div>
+                    
+                    <button class="button-84" role="button">Sing in</button>
+                    <!-- <button type="submit" class="button-84">Sing in</button> -->
+                </form>
+            </div>
+            <div class="imagem">
+                <!-- colocar imagem -->
+                <img src="../img/professional-graphic-bi-me.webp">
+            </div>
+        </div>
+    
+    </body>
+    </html>
