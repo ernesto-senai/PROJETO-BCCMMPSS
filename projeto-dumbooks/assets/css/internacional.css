@@ -1,19 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
     background-color: #fffaf1;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
 
 
-.roboto-<uniquifier> {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-/* --- NAVEGAÇÃO SUPERIOR --- */
+
 .top-nav {
     display: flex;
     align-items: center;
@@ -53,7 +50,8 @@ body {
 }
 
 .perfil-botao {
-    margin-left: auto; /* substitui padding fixo */
+    margin-left: auto;
+    /* substitui padding fixo */
 }
 
 .perfil-botao img {
@@ -184,7 +182,7 @@ body {
 
 .card-info {
     padding: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     color: #004d40;
     font-size: 14px;
     flex-grow: 1;
