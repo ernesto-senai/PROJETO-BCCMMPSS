@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Jovens</title>
-    <link rel="stylesheet" href="../assets/css/jovens1.css">
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovens</title>
+    <link rel="stylesheet" href="../assets/css/infantil.css">
 </head>
 
 <body>
@@ -17,17 +15,24 @@
                 <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
                 <span class="site-name">Dumbooks</span>
             </div>
-            <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
 
-            <div class="perfil-botao">
-                <img src="../assets/img/botao-perfil.png" alt="Perfil">
-            </div>
+            <form class="search-form" id="formPesquisa">
+                <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
+                <div id="sugestoesPesquisa" class="sugestoes"></div>
+            </form>
 
-            <div class="cart">
-                <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+            <!-- Perfil + Sacola juntos -->
+            <div class="user-actions">
+                <div class="perfil-botao">
+                    <img src="../assets/img/botao-perfil.png" alt="Perfil">
+                </div>
+                <div class="cart">
+                    <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+                </div>
             </div>
         </nav>
 
+<<<<<<< HEAD
 
                     <div class="categories">
                         <a href="internacional.html">Internacional</a>
@@ -35,6 +40,15 @@
                         <a href="jovens1.html">Jovens</a>
                         <a href="infantil.html">infantil</a>
                     </div>
+=======
+        <div class="categories">
+            <a href="Internacional.html">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="jovens1.html">Jovens</a>
+            <a href="infantil.html">Infantil</a>
+           
+        </div>
+>>>>>>> af906201f9e91367bf36368fa42fbdb8403a30c0
     </header>
 
 

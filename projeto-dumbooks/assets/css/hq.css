@@ -1,78 +1,128 @@
-body {
+/* Reset básico */
+* {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fffaf1;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- NAVEGAÇÃO SUPERIOR --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Cabeçalho principal */
+header {
+    background: linear-gradient(to right, #004d40, #010f0e);
+    /* verde escuro */
+    padding: 10px 20px;
+}
+
+/* Navegação superior */
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #004d40, #010f0e);
-    padding: 20px 30px;
-    color: white;
+    flex-wrap: wrap;
 }
 
+/* Logo e nome do site */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 80px;
-    margin-right: 20px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .site-name {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
+    color: #fff;
 }
 
-.search {
+/* Barra de pesquisa */
+.search-form {
+    position: relative;
+    max-width: 400px;
     flex: 1;
-    margin: 0 30px;
-    padding: 10px 12px;
-    border-radius: 20px;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 8px 12px;
     border: none;
+    border-radius: 20px;
+    background-color: #fff;
     font-size: 1em;
+    outline: none;
+    margin: -570px;
 }
 
-.cart img {
-    height: 60px;
-    margin: 0 20px;
+/* Sugestões de pesquisa */
+.sugestoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
 }
 
-.perfil-botao {
-    margin-left: auto; /* substitui padding fixo */
+.sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
 }
 
-.perfil-botao img {
-    height: 60px;
-    padding-top: 10px;
+.sugestao-item:hover {
+    background-color: #f0f0f0;
 }
 
-/* --- CATEGORIAS --- */
+/* Perfil + Sacola juntos */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-actions img {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Menu de categorias */
 .categories {
     display: flex;
     justify-content: center;
-    background-color: #00796b;
-    padding: 12px 0;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #00695c;
 }
 
 .categories a {
-    color: white;
-    margin: 0 20px;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 .categories a:hover {
-    text-decoration: underline;
+    color: #ffeb3b;
+    /* amarelo destaque */
 }
 
-/* --- CARROSSEL (Banner Principal) --- */
+
+
+/* --- CARROSSEL --- */
 .carousel {
     position: relative;
     width: 100%;
@@ -95,10 +145,12 @@ body {
 
 .slide img {
     width: 100%;
-    height: 500px;
+    height: 260px;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
+    border-radius: 20px;
+    margin: auto;
+    padding: 12px;
 }
 
 .caption {
@@ -134,20 +186,20 @@ body {
     background-color: #fff;
 }
 
-/* --- TÍTULO DE SEÇÃO --- */
+/* Título da seção */
 .section-title {
-    margin: 40px 60px 20px;
+    margin: 40px 0 20px 60px;
     font-size: 1.5em;
     font-weight: bold;
     color: #004d40;
 }
 
-/* --- GRID DE CARDS --- */
+/* Grid de Cards */
 .contentCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     padding: 20px;
 }
 
@@ -159,7 +211,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 5px #bcc0b7;
-    background-color: #ffffff;
+    background-color: #fff;
     transition: transform 0.3s ease;
 }
 
@@ -208,7 +260,7 @@ body {
     background-color: #004d40;
 }
 
-/* --- SEÇÃO DE EDITORAS --- */
+/* Editoras */
 .editoras {
     text-align: center;
     margin: 40px 0;
@@ -218,7 +270,7 @@ body {
 .logos-editoras {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
@@ -244,79 +296,86 @@ body {
 
 /* --- FOOTER --- */
 footer {
-    background-color: #004d40;
+    background: linear-gradient(to right, #004d40, #010f0e);
     color: white;
-    padding: 40px 20px;
-    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    padding: 40px 5%;
+    border-top: 2px solid #233463;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    gap: 20px;
     flex-wrap: wrap;
-    gap: 30px;
+}
+
+.footer-column {
+    flex-basis: 18%;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #eeeeee;
+}
+ .fotos{
+    width: 30px;
+    height: 30px;
+
+ }
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #feffff;
+    padding-top: 25px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+.foto{
+    width: 20px;
+    height: 20px;
 }
 
-.footer-about,
-.footer-links {
-    flex: 1;
-    min-width: 300px;
+.payment-info,
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.footer-about h3,
-.footer-links h3 {
-    margin: 0 0 15px;
-    border-bottom: 1px solid #00796b;
-    padding-bottom: 5px;
-}
-
-.footer-about p {
-    line-height: 1.6;
-    color: #f0f0f0;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
-    transition: text-decoration 0.2s;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-copy {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #00796b;
-    font-size: 0.9em;
-}
-
-
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
-    .top-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .search {
-        width: 100%;
-        margin: 15px 0;
-    }
-
-    .slide img {
-        height: 250px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 300px;
-    }
+.payment-info p,
+.social-media p {
+    font-size: 0.9rem;
+    color: #c4c4c4;
+    margin: 0;
 }

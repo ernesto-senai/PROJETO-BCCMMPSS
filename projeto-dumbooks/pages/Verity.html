@@ -2,39 +2,44 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/compras.css">
-  <title>Produto</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovens</title>
+    <link rel="stylesheet" href="../assets/css/compras.css">
 </head>
 
 <body>
+    <header>
+        <nav class="top-nav">
+            <div class="logo">
+                <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
+                <span class="site-name">Dumbooks</span>
+            </div>
 
-  <header>
-    <nav class="top-nav">
-      <div class="logo">
-        <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
-        <span class="site-name">Dumbooks</span>
-      </div>
-      <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
-      
-      <div class="perfil-botao">
-        <img src="../assets/img/botao-perfil.png" alt="Perfil">
-      </div>  
+            <form class="search-form" id="formPesquisa">
+                <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
+                <div id="sugestoesPesquisa" class="sugestoes"></div>
+            </form>
 
-      <div class="cart">
-        <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
-      </div>
-    </nav>
+            <!-- Perfil + Sacola juntos -->
+            <div class="user-actions">
+                <div class="perfil-botao">
+                    <img src="../assets/img/botao-perfil.png" alt="Perfil">
+                </div>
+                <div class="cart">
+                    <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+                </div>
+            </div>
+        </nav>
 
-
-                    <div class="categories">
-                        <a href="internacional.html">Internacional</a>
-                        <a href="HQ.html">HQ</a>
-                        <a href="#">Jovens</a>
-                        <a href="infantil.html">infantil</a>
-                    </div>
-  </header>
+        <div class="categories">
+            <a href="Internacional.html">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="jovens1.html">Jovens</a>
+            <a href="infantil.html">Infantil</a>
+           
+        </div>
+    </header>
 
   <main class="container-produto">
 
