@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Reset básico */
 * {
     margin: 0;
@@ -20,6 +21,21 @@ header {
 }
 
 /* Navegação superior */
+=======
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #fffaf1;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+>>>>>>> 4b7579faf33dacaf5e2d3a6107c3560ff2a1799d
 .top-nav {
     display: flex;
     align-items: center;
@@ -77,10 +93,16 @@ header {
     overflow: hidden;
 }
 
+<<<<<<< HEAD
 .sugestao-item {
     padding: 10px;
     cursor: pointer;
     transition: background 0.2s ease;
+=======
+.perfil-botao {
+    margin-left: auto;
+    /* substitui padding fixo */
+>>>>>>> 4b7579faf33dacaf5e2d3a6107c3560ff2a1799d
 }
 
 .sugestao-item:hover {
@@ -227,7 +249,7 @@ header {
 
 .card-info {
     padding: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
     color: #004d40;
     font-size: 14px;
     flex-grow: 1;
@@ -373,9 +395,65 @@ footer {
     margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .payment-info p,
 .social-media p {
     font-size: 0.9rem;
     color: #c4c4c4;
     margin: 0;
+=======
+.footer-about h3,
+.footer-links h3 {
+    margin: 0 0 15px;
+    border-bottom: 1px solid #00796b;
+    padding-bottom: 5px;
+}
+
+.footer-about p {
+    line-height: 1.6;
+    color: #f0f0f0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: text-decoration 0.2s;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #00796b;
+    font-size: 0.9em;
+}
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .slide img {
+        height: 250px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+>>>>>>> 4b7579faf33dacaf5e2d3a6107c3560ff2a1799d
 }
