@@ -1,4 +1,4 @@
-/* --- Reset e Global --- */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -6,87 +6,119 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #fffaf0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o footer fique no final se a tela for grande */
+    color: #333;
+    line-height: 1.5;
 }
 
-/* --- Header --- */
+/* Cabeçalho principal */
+header {
+    background: linear-gradient(to right, #004d40, #010f0e);
+    /* verde escuro */
+    padding: 10px 20px;
+}
+
+/* Navegação superior */
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(to right, #004d40, #010f0e);
-    padding: 20px 30px;
-    color: white;
-    gap: 20px;
+    flex-wrap: wrap;
 }
 
+/* Logo e nome do site */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
 .logo img {
-    width: 50px; /* Ajustado para um tamanho padrão de logo */
-    height: auto;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .site-name {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
+    color: #fff;
 }
 
-.search-box {
+/* Barra de pesquisa */
+.search-form {
+    position: relative;
+    max-width: 400px;
     flex: 1;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 1em;
+    outline: none;
+    margin: -570px;
+}
+
+/* Sugestões de pesquisa */
+.sugestoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.sugestao-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Perfil + Sacola juntos */
+.user-actions {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
-.search {
-  width: 50%;
-  margin: 0 30px;
-  padding: 10px 12px;
-  border-radius: 20px;
-  border: none;
-  font-size: 1em;
+.user-actions img {
+    height: 40px;
+    cursor: pointer;
 }
 
-.cart img {
-  height: 60px;
-}
-
-.perfil-botao img{
-  height: 60px;
-  padding-left: 400px ;
-  padding-top: 10px;
-}
-
+/* Menu de categorias */
 .categories {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
-    background-color: #00796b;
-    padding: 12px 0;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #00695c;
 }
 
 .categories a {
-    color: white;
-    margin: 0 20px;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1em;
-    transition: opacity 0.3s;
+    transition: color 0.3s ease;
 }
 
 .categories a:hover {
-    text-decoration: underline;
-    opacity: 0.9;
+    color: #ffeb3b;
+    /* amarelo destaque */
 }
-
 /* --- Main Content (Área da Compra Finalizada) --- */
 .main-content {
     flex: 1; /* Ocupa o espaço disponível empurrando o footer */

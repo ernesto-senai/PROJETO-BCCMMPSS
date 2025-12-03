@@ -4,13 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HQ</title>
- <link rel="stylesheet" href="../assets/css/internacional.css">
-
- 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Jovens</title>
+    <link rel="stylesheet" href="../assets/css/infantil.css">
 </head>
 
 <body>
@@ -20,30 +15,36 @@
                 <a href="pagina-inicial.html"><img src="../assets/img/logo.png" alt="Logo Dumbooks"></a>
                 <span class="site-name">Dumbooks</span>
             </div>
-            <input type="text" class="search" placeholder="🔍 Qual a escolha de hoje...">
 
-            <div class="perfil-botao">
-                <img src="../assets/img/botao-perfil.png" alt="Perfil">
-            </div>
+            <form class="search-form" id="formPesquisa">
+                <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
+                <div id="sugestoesPesquisa" class="sugestoes"></div>
+            </form>
 
-            <div class="cart">
-                <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+            <!-- Perfil + Sacola juntos -->
+            <div class="user-actions">
+                <div class="perfil-botao">
+                    <img src="../assets/img/botao-perfil.png" alt="Perfil">
+                </div>
+                <div class="cart">
+                    <img src="../assets/img/sacola.jpg" alt="Sacola de compras">
+                </div>
             </div>
         </nav>
 
-
-                    <div class="categories">
-                        <a href="internacional.html">Internacional</a>
-                        <a href="HQ.html">HQ</a>
-                        <a href="#">Jovens</a>
-                        <a href="infantil.html">infantil</a>
-                    </div>
+        <div class="categories">
+            <a href="Internacional.html">Internacional</a>
+            <a href="HQ.html">HQ</a>
+            <a href="jovens1.html">Jovens</a>
+            <a href="infantil.html">Infantil</a>
+           
+        </div>
     </header>
 
     <div class="carousel-track">
         <div class="slide">
             <a href="#">
-                <img class="imagem" src="../assets/img/HQ1.png" alt="desconto">
+                <img class="imagem" src="../assets/img/internacional.png" alt="desconto">
             </a>
         </div>
 

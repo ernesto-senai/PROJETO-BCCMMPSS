@@ -9,8 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     { nome: "Turma da Mônica Jovem" },
     { nome: "Jogos Vorazes" },
     { nome: "Maze Runner" },
-    { nome: "Divergente" }
+    { nome: " Verity" }
   ];
+
+  console.log(produtos)
 
   function similaridade(a, b) {
     a = a.toLowerCase();
