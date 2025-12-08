@@ -11,12 +11,21 @@ body {
     color: #333;
     line-height: 1.5;
 }
-
+a {
+  text-decoration: none;
+}
+a:visited{
+    color: #fffaf0;
+}
+a:link{
+    color: #fffaf0;
+}
 /* Cabeçalho principal */
 header {
     background: linear-gradient(to right, #004d40, #010f0e);
     /* verde escuro */
     padding: 1px 0px;
+    text-decoration: none;
 }
 
 /* Navegação superior */
