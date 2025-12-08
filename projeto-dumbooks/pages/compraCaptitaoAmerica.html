@@ -83,10 +83,40 @@
     </section>
 
     <aside class="secao-comentarios">
-      <h3>Deixe seu comentário</h3>
-      <textarea id="comentario" placeholder="Escreva sua opinião sobre o livro..."></textarea>
-      <button class="button-37" role="button">Enviar Comentário</button>
-    </aside>
+    <h3>Deixe seu comentário</h3>
+    <textarea id="comentario" placeholder="Escreva sua opinião sobre o livro..."></textarea>
+    <button class="button-37" role="button" id="btnEnviar">Enviar Comentário</button>
+
+    <!-- Lista de comentários -->
+    <div id="lista-comentarios">
+        <h4>Comentários:</h4>
+        <ul id="comentarios"></ul>
+    </div>
+</aside>
+
+<script>
+    const btnEnviar = document.getElementById("btnEnviar");
+    const campoComentario = document.getElementById("comentario");
+    const listaComentarios = document.getElementById("comentarios");
+
+    btnEnviar.addEventListener("click", () => {
+        const texto = campoComentario.value.trim();
+
+        if (texto !== "") {
+            // Cria um novo item de comentário
+            const li = document.createElement("li");
+            li.textContent = texto;
+
+            // Adiciona à lista
+            listaComentarios.appendChild(li);
+
+            // Limpa o campo
+            campoComentario.value = "";
+        } else {
+            alert("Por favor, escreva um comentário antes de enviar.");
+        }
+    });
+</script>
 
   </main>
   <script src="../assets/js/pesquisa.js"></script>

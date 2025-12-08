@@ -9,7 +9,7 @@
 </head>
 
 <body>
-     <header>
+    <header>
         <nav class="top-nav">
             <div class="logo">
                 <a href="../pages/pagina-inicial.html"><img src="../assets/img/logo1.png" alt="Logo Dumbooks"></a>
@@ -30,7 +30,7 @@
                     <a href="../pages/carrinho.html"><img src="../assets/img/sacola.jpg" alt="Sacola de compras"></a>
                 </div>
                 <div class="cart">
-                   <a href="../pages/favoritos.html"> <img src="../assets/img/liv.png" alt="Sacola de compras"></a>
+                    <a href="../pages/favoritos.html"> <img src="../assets/img/liv.png" alt="Sacola de compras"></a>
                 </div>
             </div>
         </nav>
@@ -40,42 +40,48 @@
             <a href="HQ.html">HQ</a>
             <a href="jovens1.html">Jovens</a>
             <a href="infantil.html">Infantil</a>
-           
+
         </div>
     </header>
-  <main class="container-produto">
+    <main class="container-produto">
 
-    <section class="galeria-produto">
-      <img src="../assets/img/livro.webp" alt="Capa do livro O amor é um cientista bagunceiro">
-    </section>
+        <section class="galeria-produto">
+            <img src="../assets/img/maluquinho.webp" alt="Captao America">
+        </section>
 
-    <section class="info-produto">
-      <h2>The Complete Witcher Series (8 Books Collection Box Set)</h2>
-      <p class="autor">Por: <strong>Andrzej Sapkowski</strong></p>
-      
-      <p class="classificacao">Recomendado para <strong>maiores de 18 anos</strong></p>
-      <div class="avaliacao">Avaliação: ★★★★☆</div>
+        <section class="info-produto">
+            <h2>O menino maluquinho</h2>
+            <p class="autor">Por: Ziraldo  <strong></strong></p>
 
-      <p class="descricao">
-       A saga de livros "The Witcher", escrita por Andrzej Sapkowski, se passa em um mundo de fantasia medieval conhecido como O Continente, repleto de criaturas monstruosas, magia e intrigas políticas. A narrativa principal segue a história de Geralt de Rívia,
-        um dos últimos bruxos remanescentes, que são mutantes treinados desde a infância para caçar e eliminar monstros por dinheiro. 
-      </p>
+            <p class="classificacao">Recomendado para <strong> L </strong></p>
+            <div class="avaliacao">Avaliação: ★★★★★</div>
 
-      <p class="preco">R$ 589,99</p>
 
-      <div class="quantity-selector">
-        <button onclick="decrease()">−</button>
-        <input type="text" id="quantity" value="1" readonly>
-        <button onclick="increase()">+</button>
-      </div>
+            <p class="descricao">
+                O Menino Maluquinho acordou cedo naquele sábado. Colocou sua panela na cabeça, como quem veste uma
+                coroa, e saiu correndo para a rua.
+                O vento batia no rosto e parecia que o mundo inteiro estava pronto para brincar com ele. Inventou
+                jogos,riu com os amigos e transformou
+                cada esquina em um castelo de aventuras. No fim do dia, cansado, percebeu que ser maluquinho não era
+                apenas fazer travessuras era descobrir
+                que a vida fica muito mais bonita quando a gente a vive com alegria e imaginação.
+            </p>
 
-      <div class="botoes-acao">
-       <a href="../pages/pagamento.html"> <button class="button-37" role="button" >Comprar agora</button></a>
-        <a href="../pages/carrinho.html"><button class="button-38" role="button">Adicionar ao carrinho</button></a>
-      </div>
-    </section>
+            <p class="preco">R$ 13,90</p>
 
-    <aside class="secao-comentarios">
+            <div class="quantity-selector">
+                <button onclick="decrease()">−</button>
+                <input type="text" id="quantity" value="1" readonly>
+                <button onclick="increase()">+</button>
+            </div>
+
+            <div class="botoes-acao">
+                <button class="button-37" role="button">Comprar agora</button>
+                <button class="button-38" role="button">Adicionar ao carrinho</button>
+            </div>
+        </section>
+
+       <aside class="secao-comentarios">
     <h3>Deixe seu comentário</h3>
     <textarea id="comentario" placeholder="Escreva sua opinião sobre o livro..."></textarea>
     <button class="button-37" role="button" id="btnEnviar">Enviar Comentário</button>
@@ -112,26 +118,28 @@
 </script>
 
 
-  </main>
+    </main>
+    <script src="../assets/js/pesquisa.js"></script>
 
-  <script>
-  function increase() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('quantity').value = value;
-  }
+    <script>
+        function increase() {
+            var value = parseInt(document.getElementById('quantity').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value++;
+            document.getElementById('quantity').value = value;
+        }
 
-  function decrease() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : ''; // Impede números negativos ou zero
-    value--;
-    // Garante que o mínimo seja 1
-    if(value < 1) value = 1; 
-    document.getElementById('quantity').value = value;
-  }
-</script>
+        function decrease() {
+            var value = parseInt(document.getElementById('quantity').value, 10);
+            value = isNaN(value) ? 0 : value;
+            value < 1 ? value = 1 : ''; // Impede números negativos ou zero
+            value--;
+            // Garante que o mínimo seja 1
+            if (value < 1) value = 1;
+            document.getElementById('quantity').value = value;
+        }
+    </script>
 
-  </body>
+</body>
+
 </html>
