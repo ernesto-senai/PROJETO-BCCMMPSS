@@ -63,11 +63,6 @@
 
       <p class="preco">R$ 12,90</p>
 
-      <div class="quantity-selector">
-        <button onclick="decrease()">−</button>
-        <input type="text" id="quantity" value="1" readonly>
-        <button onclick="increase()">+</button>
-      </div>
 
       <div class="botoes-acao">
         <button class="button-37" role="button">Comprar agora</button>
@@ -114,24 +109,6 @@
 
   </main>
 
-  <script>
-  function increase() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('quantity').value = value;
-  }
-
-  function decrease() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : ''; // Impede números negativos ou zero
-    value--;
-    // Garante que o mínimo seja 1
-    if(value < 1) value = 1; 
-    document.getElementById('quantity').value = value;
-  }
-</script>
 
   </body>
 </html>
