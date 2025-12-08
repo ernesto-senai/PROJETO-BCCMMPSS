@@ -1,70 +1,123 @@
-/* Estilos Globais e do Header (mantidos como estavam) */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fffaf0;
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    line-height: 1.5;
 }
 
+/* Cabeçalho principal */
+header {
+    background: linear-gradient(to right, #004d40, #010f0e);
+    /* verde escuro */
+    padding: 1px 0px;
+}
+
+/* Navegação superior */
 .top-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(to right, #004d40);
-  padding: 30px 30px;
-  color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+/* Logo e nome do site */
 .logo {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  height: 80px;
-  margin-right: 20px;
+    height: 60px;
+    margin-right: 10px;
 }
 
 .site-name {
-  font-size: 1.5em;
-  font-weight: bold;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
 }
 
-.search {
-  width: 50%;
-  margin: 0 30px;
-  padding: 10px 12px;
-  border-radius: 20px;
-  border: none;
-  font-size: 1em;
+/* Barra de pesquisa */
+.search-form {
+    position: relative;
+    max-width: 400px;
+    flex: 1;
 }
 
-.cart img {
-  height: 60px;
+.search-form input {
+    width: 100%;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 1em;
+    outline: none;
+    margin: -428px;
 }
 
-.perfil-botao img{
-  height: 60px;
-  padding-left: 400px;
-  padding-top: 10px;
+/* Sugestões de pesquisa */
+.sugestoes {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1000;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
 }
 
+.sugestao-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.sugestao-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Perfil + Sacola juntos */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-actions img {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Menu de categorias */
 .categories {
-  display: flex;
-  justify-content: center;
-  background-color: #00796b;
-  padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    background-color: #00695c;
 }
 
 .categories a {
-  color: white;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .categories a:hover {
-  text-decoration: underline;
+    color: #ffeb3b;
+    /* amarelo destaque */
 }
 
 /* --- ESTILOS DA PÁGINA DO CARRINHO --- */
