@@ -4,135 +4,277 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/css/compras.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <title>Produto</title>
+  <title>HQ</title>
+  <link rel="stylesheet" href="../assets/css/internacional.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+
 </head>
 
 <body>
+  <header>
+    <nav class="top-nav">
+      <div class="logo">
+        <a href="../pages/pagina-inicial.html"><img src="../assets/img/logo1.png" alt="Logo Dumbooks"></a>
+        <span class="site-name">Dumbooks</span>
+      </div>
 
-   <header>
-        <nav class="top-nav">
-            <div class="logo">
-                <a href="../pages/pagina-inicial.html"><img src="../assets/img/logo1.png" alt="Logo Dumbooks"></a>
-                <span class="site-name">Dumbooks</span>
-            </div>
+      <form class="search-form" id="formPesquisa">
+        <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
+        <div id="sugestoesPesquisa" class="sugestoes"></div>
+      </form>
 
-            <form class="search-form" id="formPesquisa">
-                <input type="text" id="campoPesquisa" placeholder="Buscar produtos..." autocomplete="off">
-                <div id="sugestoesPesquisa" class="sugestoes"></div>
-            </form>
-
-            <!-- Perfil + Sacola juntos -->
-            <div class="user-actions">
-                <div class="perfil-botao">
-                    <a href="../pages/perfil.html"><img src="../assets/img/botao-perfil.png" alt="Perfil"></a>
-                </div>
-                <div class="cart">
-                    <a href="../pages/carrinho.html"><img src="../assets/img/sacola.jpg" alt="Sacola de compras"></a>
-                </div>
-                <div class="cart">
-                   <a href="../pages/favoritos.html"> <img src="../assets/img/liv.png" alt="Sacola de compras"></a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="categories">
-            <a href="Internacional.html">Internacional</a>
-            <a href="HQ.html">HQ</a>
-            <a href="jovens1.html">Jovens</a>
-            <a href="infantil.html">Infantil</a>
-           
+      <!-- Perfil + Sacola juntos -->
+      <div class="user-actions">
+        <div class="perfil-botao">
+          <a href="../pages/perfil.html"><img src="../assets/img/botao-perfil.png" alt="Perfil"></a>
         </div>
-    </header>
-  <main class="container-produto">
-
-    <section class="galeria-produto">
-      <img src="../assets/img/DOUTOR-ESTRANHO.jpg" alt="Captao America">
-    </section>
-
-    <section class="info-produto">
-      <h2>Verity</h2>
-      <p class="autor">Por: <strong>Marvel</strong></p>
-      
-      <p class="classificacao">Recomendado para <strong>maiores de 15 anos</strong></p>
-      <div class="avaliacao">Avaliação: ★★★★☆</div>
-
-      <p class="descricao">
-Doutor Estranho, antes de se tornar o Mago Supremo, era um cirurgião brilhante e arrogante. Um acidente destruiu suas mãos e sua carreira, levando-o a buscar desesperadamente uma cura. Essa busca o conduziu ao Oriente, onde conheceu o Ancião e descobriu o mundo das artes místicas. Com treino e disciplina, Stephen Strange deixou de lado o ego e abraçou a responsabilidade de proteger a Terra contra ameaças mágicas e interdimensionais. Armado com relíquias poderosas e vasto conhecimento arcano, ele enfrenta inimigos que desafiam a realidade e luta para manter o equilíbrio entre os mundos. Sua história é marcada pela transformação de um homem vaidoso em um guardião sábio, que entende que o verdadeiro poder está na responsabilidade e no sacrifício.
-      </p>
-
-      <p class="preco">R$ 15,00</p>
-
-      <div class="quantity-selector">
-        <button onclick="decrease()">−</button>
-        <input type="text" id="quantity" value="1" readonly>
-        <button onclick="increase()">+</button>
+        <div class="cart">
+          <a href="../pages/carrinho.html"><img src="../assets/img/sacola.jpg" alt="Sacola de compras"></a>
+        </div>
+        <div class="cart">
+          <a href="../pages/favoritos.html"> <img src="../assets/img/liv.png" alt="Sacola de compras"></a>
+        </div>
       </div>
+    </nav>
 
-      <div class="botoes-acao">
-        <button class="button-37" role="button">Comprar agora</button>
-        <button class="button-38" role="button">Adicionar ao carrinho</button>
-      </div>
-    </section>
+    <div class="categories">
+      <a href="Internacional.html">Internacional</a>
+      <a href="HQ.html">HQ</a>
+      <a href="jovens1.html">Jovens</a>
+      <a href="infantil.html">Infantil</a>
 
-   <aside class="secao-comentarios">
-    <h3>Deixe seu comentário</h3>
-    <textarea id="comentario" placeholder="Escreva sua opinião sobre o livro..."></textarea>
-    <button class="button-37" role="button" id="btnEnviar">Enviar Comentário</button>
-
-    <!-- Lista de comentários -->
-    <div id="lista-comentarios">
-        <h4>Comentários:</h4>
-        <ul id="comentarios"></ul>
     </div>
-</aside>
+  </header>
+  <div class="carousel-track">
+    <div class="slide">
+      <a href="#">
+        <img class="imagem" src="../assets/img/hq.png" alt="desconto">
+      </a>
+    </div>
 
-<script>
-    const btnEnviar = document.getElementById("btnEnviar");
-    const campoComentario = document.getElementById("comentario");
-    const listaComentarios = document.getElementById("comentarios");
-
-    btnEnviar.addEventListener("click", () => {
-        const texto = campoComentario.value.trim();
-
-        if (texto !== "") {
-            // Cria um novo item de comentário
-            const li = document.createElement("li");
-            li.textContent = texto;
-
-            // Adiciona à lista
-            listaComentarios.appendChild(li);
-
-            // Limpa o campo
-            campoComentario.value = "";
-        } else {
-            alert("Por favor, escreva um comentário antes de enviar.");
-        }
-    });
-</script>
+  </div>
 
 
+
+  <h2 class="section-title">Livros mais vendidos:</h2>
+
+  <section class="contentCards">
+    <div class="card">
+      <img class="card-image" src="../assets/img/CAPTAO-AMERICA.png" alt="Capitão America" />
+      <div class="card-info">
+        <h3>Capitão América N°1 (06/1979) </h3>
+        <p class="card-author"> Marvel Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/DEADPOOL.png" alt="Capa do livro É Assim que Acaba" />
+      <div class="card-info">
+        <h3>Deadpool Vol. 3: X Marks the Spot</h3>
+        <p class="card-author">Marvel Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/AVENGERS.png" alt="Capa do livro O Pequeno Príncipe" />
+      <div class="card-info">
+        <h3>Avengers Epic Collection: Court-Martia</h3>
+        <p class="card-author">Marvel Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/AMAZING-FANTASY.jpg"
+        alt="Capa do livro Vermelho, Branco e Sangue Azul" />
+      <div class="card-info">
+        <h3>Amazing Fantasy (1962) #15</h3>
+        <p class="card-author">Marvel Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/DOUTOR-ESTRANHO.jpg" alt="Capa do livro Divergente" />
+      <div class="card-info">
+        <h3>Doutor Estranho #1: A Vida do Doutor Estranho</h3>
+        <p class="card-author">Marvel Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/LIGA-DA-JUSTIÇA.png"
+        alt="Capa do livro Como se tornar um cristão inútil" />
+      <div class="card-info">
+        <h3>Justice League International #24</h3>
+        <p class="card-author">DC Comics</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+  </section>
+
+  <section class="editoras">
+    <h2 class="section-title">Navegue por editora:</h2>
+    <div class="logos-editoras">
+      <div class="logo-item">
+        <img class="logo" src="../assets/img/MARVEL2.webp" alt="MARVEL">
+      </div>
+      <div class="logo-item">
+        <img src="../assets/img/panini.png" alt="PANINI">
+      </div>
+      <div class="logo-item">
+        <img src="../assets/img/dc.png" alt="Intrínseca">
+      </div>
+      <div class="logo-item">
+        <img src="../assets/img/RISCO.png" alt="Rocco">
+      </div>
+      <div class="logo-item">
+        <img src="../assets/img/BOOMSTUDIOS.png" alt="Cherry">
+      </div>
+    </div>
+  </section>
+
+  <h2 class="section-title">Semelhantes:</h2>
+
+  <section class="contentCards">
+    <div class="card">
+      <img class="card-image" src="../assets/img/box-guerra-civil.jpg" alt="Capa do livro Verity" />
+      <div class="card-info">
+        <h3>Box Marvel Guerra Civil: Guerras secretas</h3>
+        <p class="card-author">Colleen Hoover</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/livro.webp" alt="Capa do livro É Assim que Acaba" />
+      <div class="card-info">
+        <h3>The Complete Witcher Series (8 Books Collection Box Set)</h3>
+        <p class="card-author"> Andrzej Sapkowski </p>
+      </div>
+      <a class="vermais" href="compraLivro3.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/box-tartaruga-ninja.jpg" alt="Capa do livro O Pequeno Príncipe" />
+      <div class="card-info">
+        <h3>Tartarugas Ninja (Coleção IDW) – Edição Absoluta Vol. 1</h3>
+        <p class="card-author"> Kevin Eastman, Tom Waltz.</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/box-dragao.webp" alt="Capa do livro Vermelho, Branco e Sangue Azul" />
+      <div class="card-info">
+        <h3>Box Dragon Ball 1-42 </h3>
+        <p class="card-author">Akira Toriyama </p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/box-diario-de-um-banana .jpg" alt="Capa do livro Divergente" />
+      <div class="card-info">
+        <h3>Diário de um Banana - Box Completo</h3>
+        <p class="card-author">Jeff Kinney</p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+
+    <div class="card">
+      <img class="card-image" src="../assets/img/sanoman.jpg" alt="Capa do livro Como se tornar um cristão inútil" />
+      <div class="card-info">
+        <h3>Sandman Box Set </h3>
+        <p class="card-author">Neil Gaiman </p>
+      </div>
+      <a class="vermais" href="ita.html">Veja mais</a>
+    </div>
+  </section>
   </main>
 
-  <script>
-  function increase() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    document.getElementById('quantity').value = value;
-  }
+  <!-- footer -->
 
-  function decrease() {
-    var value = parseInt(document.getElementById('quantity').value, 10);
-    value = isNaN(value) ? 0 : value;
-    value < 1 ? value = 1 : ''; // Impede números negativos ou zero
-    value--;
-    // Garante que o mínimo seja 1
-    if(value < 1) value = 1; 
-    document.getElementById('quantity').value = value;
-  }
-</script>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>O Compra Agora</h4>
+        <ul>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Nossos parceiros</a></li>
+        </ul>
+      </div>
 
-  </body>
+      <div class="footer-column">
+        <h4>Como comprar</h4>
+        <ul>
+          <li><a href="#">Primeiro acesso</a></li>
+          <li><a href="#">Após a conclusão do pedido</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Nossas políticas</h4>
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Termos de uso - Distribuidor</a></li>
+          <li><a href="#">Regras para uso</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+          <li><a href="#">Política de cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Portal do distribuidor</a></li>
+          <li><a href="#">Seja um parceiro</a></li>
+          <li><a href="#">Mapa do site</a></li>
+          <li><a href="#">Venda Assistida</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Suporte</h4>
+        <ul>
+          <li><a href="#">Garantia de produto</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Suporte Vendedor</a></li>
+          <li><a href="#">Suporte Lojista</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="payment-info">
+        <p>Segurança e pagamento</p>
+        <div class="card-icons">
+          <img class="foto" src="../assets/img/visa.png" alt="Visa">
+          <img class="foto" src="../assets/img/master.png" alt="Mastercard">
+          <img class="foto" src="../assets/img/elo.png" alt="Elo">
+          <img class="foto" src="../assets/img/pix.png" alt="Pix">
+        </div>
+      </div>
+
+      <div class="social-media">
+        <p>Siga-nos</p>
+        <div class="social-icons">
+          <img class="fotos" src="../assets/img/facebook.png" alt="Facebook">
+          <img class="fotos" src="../assets/img/youtube.png" alt="YouTube">
+          <img class="fotos" src="../assets/img/instagram.png" alt="Instagram">
+          <img class="fotos" src="../assets/img/tiktok.png" alt="TikTok">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/pesquisa.js"></script>
+</body>
+
 </html>
