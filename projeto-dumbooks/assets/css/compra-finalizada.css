@@ -35,7 +35,7 @@ header {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     margin-right: 10px;
 }
 
@@ -60,7 +60,7 @@ header {
     background-color: #fff;
     font-size: 1em;
     outline: none;
-   margin: -428px;
+    margin: -428px;
 }
 
 /* Sugestões de pesquisa */
@@ -120,6 +120,9 @@ header {
     color: #ffeb3b;
     /* amarelo destaque */
 }
+
+
+
 /* --- Main Content (Área da Compra Finalizada) --- */
 .main-content {
     flex: 1; /* Ocupa o espaço disponível empurrando o footer */
