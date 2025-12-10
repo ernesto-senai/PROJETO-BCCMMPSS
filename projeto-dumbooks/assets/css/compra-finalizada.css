@@ -171,44 +171,192 @@ header {
     background-color: #0b3815;
 }
 
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer {
-    background-color: #004d40;
+    background: linear-gradient(to right, #004d40, #010f0e);
     color: white;
-    padding: 30px 20px;
-    text-align: center;
-    margin-top: auto; /* Segurança extra para ficar no fundo */
+    font-family: Arial, sans-serif;
+    padding: 40px 5%;
+    border-top: 2px solid #233463;
 }
 
 .footer-content {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.footer-links {
+.footer-column {
+    flex-basis: 18%;
+    min-width: 150px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
     margin-bottom: 20px;
+    color: #eeeeee;
 }
 
-.footer-links a {
-    color: #a7ffeb;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 0.9em;
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-about p {
+.footer-column li {
     margin-bottom: 10px;
-    line-height: 1.5;
-    font-size: 0.9em;
-    opacity: 0.9;
 }
 
-.copyright {
-    font-size: 0.8em;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 15px;
+.footer-column a {
+    color: #c4c4c4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.payment-info,
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.payment-info p,
+.social-media p {
+    font-size: 0.9rem;
+    color: #c4c4c4;
+    margin: 0;
+}
+
+/* Imagens pequenas do footer */
+.fotos {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.foto {
+    width: 40px; /* Ajustei um pouco para caber melhor */
+    height: auto;
+    margin: 0 5px;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .footer-content {
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .footer-column {
+        flex-basis: 40%;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .payment-info,
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .slide img {
+        height: 250px;
+    }
+
+    .top-nav {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .search-form {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    .search-form input {
+        margin: 0; /* Remove a margem negativa que estava quebrando */
+    }
+    
+    .categories {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px 15px;
+    }
+
+    .categories a {
+        flex-shrink: 0;
+    }
+}
+
+.content-meio {
+
+    margin: 2rem;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 90px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.card-meio {
+
+    width: 30%;
+
+    max-width: 350px;
+
+}
+
+
+
+.meio {
+
+    margin: auto;
+
+    background: #000;
+
+    width: 100%;
+
+    height: 500px;
+
+    padding: 0px;
+
+    border-radius: 1rem;
+
 }
