@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #fffaf0;
     color: #333;
     line-height: 1.5;
@@ -204,9 +205,8 @@ header {
     margin-bottom: 5px;
     /* Limita o texto a 2 linhas para não quebrar o layout */
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    -webkit-linecla: 2;
+  overflow: hidden;
 }
 
 .autor {

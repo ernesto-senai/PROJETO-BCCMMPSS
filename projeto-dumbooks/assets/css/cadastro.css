@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -11,7 +12,17 @@ body {
     height: 100vh;
     overflow: hidden; /* Evita scroll se não for necessário */
 }
+.tenho-conta{
+    text-align: center;
+    text-decoration: none;
+}
 
+.tenho-conta a:visited{
+    color: black;
+}
+.tenho-conta a:link{
+    color: black;
+}
 .container {
     display: flex;
     width: 100%;
